@@ -1,0 +1,44 @@
+body {
+    background-color: darksalmon;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.col-8 {
+    margin-top: 10px;
+}
+
+.col-2 {
+    margin-top: 10px;
+}
+
+.table {
+    text-align: center;
+}
+
+.oldalGomb {
+    margin: 10px;
+    box-shadow: 10px 10px 10px dimgray;
+}
+
+.valasztasDiv {
+    text-align: center;
+}
+
+.valaszKep {
+    width: 100px;
+    height: 100px;
+    box-shadow: 10px 10px 10px dimgray;
+    border: solid 2px black;
+}
+.jatekTable {
+    box-shadow: 10px 10px 10px dimgray;
+}

@@ -4,44 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/kopapirollo.css">
     <title>Document</title>
 </head>
 
 <body>
 
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/orders.html">Order</a></li>
-        <li><a href="/about.html">About</a></li>
-    </ul>
-    <h1>Fantastic burger</h1>
-    <ul>
-        <li>meat burger
-            <ul>
-                <li>Beef</li>
-                <li>Pork</li>
-                <li>Turkey</li>
-            </ul>
-        </li>
+    <!--<script>alert("Üdvözöllek az Agymenők kő-papír-olló játékban!")</script>-->
 
-        <li>vegetarian</li>
-        <li>piedone</li>
-    </ul>
+    <div>
+        <h1>Agymenők kő-papír-olló</h1>
+    </div>
 
-    <h2>addition</h2>
-    <ol>
-        <li>tomato</li>
-        <li>apple</li>
-        <li>pepper</li>
-        <li>hot chili sauce</li>
-    </ol>
+    <div class="row">
+        <div class="col 2">
+            <button onclick="szabalyok()" class="btn btn-primary oldalGomb">Szabályok</button>
+        </div>
+        <div class="col-8">
+            <table class="table table-hover table-dark jatekTable">
+                <thead>
+                    <tr>
+                        <th scope="col">Játékos</th>
+                        <th scope="col">Gép</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <small id="jatekosKep">5</small>
+                        </td>
+                        <td>
+                            <small id="gepKep">5</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Játékos: <small id="jatekosEredmeny">0</small></td>
+                        <td>Gép: <small id="gepEredmeny">0</small></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button onclick="jatek()" class="btn btn-primary">Játék</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col 2"></div>
+    </div>
 
+    <h3>Válassz!</h3>
 
-
-    <a target="blank" href="http://www.mindmegette.hu/hamburger-hazilag.recept/">Hamburger - házilag</a>
-    <a href="/orders.html">orders</a>
-    <a href="http://www.mindmegette.hu/hamburger-hazilag.recept/"><img width="100" src="img/burger.jpg"
-            alt="Burger"></a>
+    <div class="valasztasDiv">
+        <img onclick="koKep()" class="valaszKep" src="/img/ko.jpg" alt="Kő">
+        <img class="valaszKep" src="/img/papir.jpg" alt="Papír">
+        <img class="valaszKep" src="/img/ollo.jpg" alt="Olló">
+        <img class="valaszKep" src="/img/gyik.jpg" alt="Gyík">
+        <img class="valaszKep" src="/img/spock.jpg" alt="Spock">
+    </div>
+        
+    <script src="/js/kopapirollo.js"></script>
 </body>
 
 </html>
