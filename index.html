@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/kopapirollo.css">
-    <title>Document</title>
+    <title>Agymenők kő-papír-olló</title>
 </head>
 
 <body>
 
-    <!--<script>alert("Üdvözöllek az Agymenők kő-papír-olló játékban!")</script>-->
+    <script>alert("Üdvözöllek az Agymenők kő-papír-olló játékban!")</script>
 
     <div>
         <h1>Agymenők kő-papír-olló</h1>
@@ -32,18 +32,15 @@
                 <tbody>
                     <tr>
                         <td>
-                            <small id="jatekosKep">5</small>
+                            <small ><img name="jatekosKep" class="valaszKep" src="/img/sheldon.jpg" alt="Sheldon"></small>
                         </td>
                         <td>
-                            <small id="gepKep">5</small>
+                            <small id="gepKep"><img class="valaszKep" src="/img/sheldon.jpg" alt="Sheldon"></small>
                         </td>
                     </tr>
                     <tr>
                         <td>Játékos: <small id="jatekosEredmeny">0</small></td>
                         <td>Gép: <small id="gepEredmeny">0</small></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2"><button onclick="jatek()" class="btn btn-primary">Játék</button></td>
                     </tr>
                 </tbody>
             </table>
@@ -54,13 +51,13 @@
     <h3>Válassz!</h3>
 
     <div class="valasztasDiv">
-        <img onclick="koKep()" class="valaszKep" src="/img/ko.jpg" alt="Kő">
-        <img class="valaszKep" src="/img/papir.jpg" alt="Papír">
-        <img class="valaszKep" src="/img/ollo.jpg" alt="Olló">
-        <img class="valaszKep" src="/img/gyik.jpg" alt="Gyík">
-        <img class="valaszKep" src="/img/spock.jpg" alt="Spock">
+        <img name="vkokep" onclick="koValaszt()" class="valaszKep" src="/img/ko.jpg" alt="Kő">
+        <img name="vpapirkep" onclick="papirValaszt()" class="valaszKep" src="/img/papir.jpg" alt="Papír">
+        <img name="vollokep" onclick="olloValaszt()" class="valaszKep" src="/img/ollo.jpg" alt="Olló">
+        <img name="vgyikkep" onclick="gyikValaszt()" class="valaszKep" src="/img/gyik.jpg" alt="Gyík">
+        <img name="vspockkep" onclick="spockValaszt()" class="valaszKep" src="/img/spock.jpg" alt="Spock">
     </div>
-        
+    
     <script src="/js/kopapirollo.js"></script>
 </body>
 

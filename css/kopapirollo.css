@@ -26,7 +26,7 @@ h3 {
 
 .oldalGomb {
     margin: 10px;
-    box-shadow: 10px 10px 10px dimgray;
+    box-shadow: 5px 5px 10px dimgray;
 }
 
 .valasztasDiv {
@@ -36,9 +36,9 @@ h3 {
 .valaszKep {
     width: 100px;
     height: 100px;
-    box-shadow: 10px 10px 10px dimgray;
+    box-shadow: 5px 5px 10px dimgray;
     border: solid 2px black;
 }
 .jatekTable {
-    box-shadow: 10px 10px 10px dimgray;
+    box-shadow: 5px 5px 10px dimgray;
 }
