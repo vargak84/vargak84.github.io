@@ -5,8 +5,12 @@
 //console.log(veletlenszam);
 
 let eredmeny = document.querySelector("small[id='eredmeny']");
+let szam1 = 0;
+let szam2 = 0;
 let jatekosEredmeny = document.querySelector("small[id='jatekosEredmeny']");
+jatekosEredmeny.innerHTML = szam1;
 let gepEredmeny = document.querySelector("small[id = 'gepEredmeny']");
+gepEredmeny.innerHTML = szam2;
 
 //Szabályok
 function szabalyok() {
@@ -65,45 +69,59 @@ function kiNyer() {
         } else if
             (document.jatekosKep.src.indexOf("/img/ollo.jpg") >= 0 && document.gepKep.src.indexOf("/img/papir.jpg") >= 0) {
             eredmeny.innerHTML = "Nyert"
-            
+            szam1 += 1
+            jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/papir.jpg") >= 0 && document.gepKep.src.indexOf("/img/ko.jpg") >= 0) {
             eredmeny.innerHTML = "Nyert"
-            
+            szam1 += 1
+            jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/ko.jpg") >= 0 && document.gepKep.src.indexOf("/img/gyik.jpg") >= 0) {
             eredmeny.innerHTML = "Nyert"
-            
+            szam1 += 1
+            jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/gyik.jpg") >= 0 && document.gepKep.src.indexOf("/img/spock.jpg") >= 0) {
             eredmeny.innerHTML = "Nyert"
-            
+            szam1 += 1
+            jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/spock.jpg") >= 0 && document.gepKep.src.indexOf("/img/ollo.jpg") >= 0) {
             eredmeny.innerHTML = "Nyert"
-            
+            szam1 += 1
+            jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/ollo.jpg") >= 0 && document.gepKep.src.indexOf("/img/gyik.jpg") >= 0) {
             eredmeny.innerHTML = "Nyert"
-            
+            szam1 += 1
+            jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/gyik.jpg") >= 0 && document.gepKep.src.indexOf("/img/papir.jpg") >= 0) {
             eredmeny.innerHTML = "Nyert"
-            
+            szam1 += 1
+            jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/papir.jpg") >= 0 && document.gepKep.src.indexOf("/img/spock.jpg") >= 0) {
             eredmeny.innerHTML = "Nyert"
-            
+            szam1 += 1
+            jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/spock.jpg") >= 0 && document.gepKep.src.indexOf("/img/ko.jpg") >= 0) {
             eredmeny.innerHTML = "Nyert"
-            
+            szam1 += 1
+            jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/ko.jpg") >= 0 && document.gepKep.src.indexOf("/img/ollo.jpg") >= 0) {
             eredmeny.innerHTML = "Nyert"
-            
+            szam1 += 1
+            jatekosEredmeny.innerHTML = szam1
         } else {
             eredmeny.innerHTML = "Vesztett"
-            
+            szam2 += 1
+            gepEredmeny.innerHTML = szam2
         }
+//        if (szam1 == 1 || szam2 == 1) {
+//            alert("Vége");
+//        }
 }
