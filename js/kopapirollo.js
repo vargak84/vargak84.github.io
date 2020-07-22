@@ -122,6 +122,6 @@ function kiNyer() {
             gepEredmeny.innerHTML = szam2
         }
 //        if (szam1 == 1 || szam2 == 1) {
-//            alert("Vége");
+//            console.log("Vége a játéknak!")
 //        }
 }
