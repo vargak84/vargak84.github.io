@@ -11,7 +11,7 @@ function szabalyok() {
 
 //Játék gomb
 function koValaszt() {
-    document.jatekosKep.src = document.vkokep.src;
+    document.jatekosKep.src = "img/ko.jpg";
     veletlenKep();
     kiNyer()
 }
@@ -19,31 +19,35 @@ function koValaszt() {
 function papirValaszt() {
     document.jatekosKep.src = document.vpapirkep.src;
     veletlenKep()
+    kiNyer()
 }
 
 function olloValaszt() {
     document.jatekosKep.src = document.vollokep.src;
     veletlenKep()
+    kiNyer()
 }
 
 function gyikValaszt() {
     document.jatekosKep.src = document.vgyikkep.src;
     veletlenKep()
+    kiNyer()
 }
 
 function spockValaszt() {
     document.jatekosKep.src = document.vspockkep.src;
     veletlenKep()
+    kiNyer()
 }
 
 //Véletlenkép generátor
 function veletlenKep() {
     let kep = new Array()
-    kep[1]="../img/ko.jpg"
-    kep[2]="../img/papir.jpg"
-    kep[3]="../img/ollo.jpg"
-    kep[4]="../img/gyik.jpg"
-    kep[5]="../img/spock.jpg"
+    kep[1]="img/ko.jpg"
+    kep[2]="img/papir.jpg"
+    kep[3]="img/ollo.jpg"
+    kep[4]="img/gyik.jpg"
+    kep[5]="img/spock.jpg"
     
     let ry=Math.floor(Math.random()*kep.length)
     if (ry==0) 
@@ -52,6 +56,10 @@ function veletlenKep() {
     }
 
 function kiNyer() {
-    if (document.gepKep.src == document.jatekosKep.src)
+    if (document.jatekosKep.src == document.gepKep.src) {
     console.log("döntetlen");
+    }
+    if (document.jatekosKep.src == "/img/ko.jpg" && document.gepKep.src == "/img/papir.jpg") {
+    console.log("Nyert");
+    }
 }
