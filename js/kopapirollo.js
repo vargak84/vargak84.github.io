@@ -57,9 +57,38 @@ function veletlenKep() {
 
 function kiNyer() {
     if (document.jatekosKep.src == document.gepKep.src) {
-    console.log("döntetlen");
-    }
-    if (document.jatekosKep.src == "/img/ko.jpg" && document.gepKep.src == "/img/papir.jpg") {
-    console.log("Nyert");
-    }
+        console.log("döntetlen")
+        } else if
+            (document.jatekosKep.src.indexOf("/img/ollo.jpg") >= 0 && document.gepKep.src.indexOf("/img/papir.jpg") >= 0) {
+            console.log("Nyert")
+        } else if
+            (document.jatekosKep.src.indexOf("/img/papir.jpg") >= 0 && document.gepKep.src.indexOf("/img/ko.jpg") >= 0) {
+            console.log("Nyert");
+        } else if
+            (document.jatekosKep.src.indexOf("/img/ko.jpg") >= 0 && document.gepKep.src.indexOf("/img/gyik.jpg") >= 0) {
+            console.log("Nyert");
+        } else if
+            (document.jatekosKep.src.indexOf("/img/gyik.jpg") >= 0 && document.gepKep.src.indexOf("/img/spock.jpg") >= 0) {
+            console.log("Nyert");
+        } else if
+            (document.jatekosKep.src.indexOf("/img/spock.jpg") >= 0 && document.gepKep.src.indexOf("/img/ollo.jpg") >= 0) {
+            console.log("Nyert");
+        } else if
+            (document.jatekosKep.src.indexOf("/img/ollo.jpg") >= 0 && document.gepKep.src.indexOf("/img/gyik.jpg") >= 0) {
+            console.log("Nyert");
+        } else if
+            (document.jatekosKep.src.indexOf("/img/gyik.jpg") >= 0 && document.gepKep.src.indexOf("/img/papir.jpg") >= 0) {
+            console.log("Nyert");
+        } else if
+            (document.jatekosKep.src.indexOf("/img/papir.jpg") >= 0 && document.gepKep.src.indexOf("/img/spock.jpg") >= 0) {
+            console.log("Nyert");
+        } else if
+            (document.jatekosKep.src.indexOf("/img/spock.jpg") >= 0 && document.gepKep.src.indexOf("/img/ko.jpg") >= 0) {
+            console.log("Nyert");
+        } else if
+            (document.jatekosKep.src.indexOf("/img/ko.jpg") >= 0 && document.gepKep.src.indexOf("/img/ollo.jpg") >= 0) {
+            console.log("Nyert");
+        } else {
+        console.log("Vesztett");
+        }
 }
