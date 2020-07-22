@@ -11,7 +11,7 @@
 
 <body>
 
-    <script>alert("Üdvözöllek az Agymenők kő-papír-olló játékban!")</script>
+    <!--<script>alert("Üdvözöllek az Agymenők kő-papír-olló játékban!")</script>-->
 
     <div>
         <h1>Agymenők kő-papír-olló</h1>
@@ -32,15 +32,19 @@
                 <tbody>
                     <tr>
                         <td>
-                            <small ><img name="jatekosKep" class="valaszKep" src="/img/sheldon.jpg" alt="Sheldon"></small>
+                            <small><img name="jatekosKep" class="valaszKep" src="/img/sheldon.jpg"
+                                    alt="Sheldon"></small>
                         </td>
                         <td>
-                            <small id="gepKep"><img class="valaszKep" src="/img/sheldon.jpg" alt="Sheldon"></small>
+                            <small><img name="gepKep" class="valaszKep" src="/img/sheldon.jpg" alt="Sheldon"></small>
                         </td>
                     </tr>
                     <tr>
                         <td>Játékos: <small id="jatekosEredmeny">0</small></td>
                         <td>Gép: <small id="gepEredmeny">0</small></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><small id="eredmeny">Kezdődhet a játék?</small></td>
                     </tr>
                 </tbody>
             </table>
@@ -57,7 +61,7 @@
         <img name="vgyikkep" onclick="gyikValaszt()" class="valaszKep" src="/img/gyik.jpg" alt="Gyík">
         <img name="vspockkep" onclick="spockValaszt()" class="valaszKep" src="/img/spock.jpg" alt="Spock">
     </div>
-    
+    <a href=""></a>
     <script src="/js/kopapirollo.js"></script>
 </body>
 

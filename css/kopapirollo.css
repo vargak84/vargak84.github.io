@@ -42,3 +42,7 @@ h3 {
 .jatekTable {
     box-shadow: 5px 5px 10px dimgray;
 }
+
+#eredmeny {
+    font-size: 30px;
+}
