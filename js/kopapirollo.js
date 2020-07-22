@@ -4,6 +4,8 @@
 //let veletlenszam = minszam + Math.floor( Math.random() * ( maxszam - minszam + 1 ) );
 //console.log(veletlenszam);
 
+let eredmeny = document.querySelector("small[id='eredmeny']");
+
 //Szabályok
 function szabalyok() {
     window.alert("Agymenők kő-papír-olló szabályai:\n\nAz olló elvágja a papírt.\nA papír bevonja a követ.\nA kő agyonüti a gyíkot.\nA gyík megmarja Spockot.\nSpock eltöri az ollót.\nAz olló lefejezi a gyíkot.\nA gyík megeszi a papírt.\nA papír cáfolja Spockot.\nSpock feloldja a követ.\nÉs mint általában, a kő eltöri az ollót.");
@@ -57,38 +59,38 @@ function veletlenKep() {
 
 function kiNyer() {
     if (document.jatekosKep.src == document.gepKep.src) {
-        console.log("döntetlen")
+        eredmeny.innerHTML = "Döntetlen"
         } else if
             (document.jatekosKep.src.indexOf("/img/ollo.jpg") >= 0 && document.gepKep.src.indexOf("/img/papir.jpg") >= 0) {
-            console.log("Nyert")
+            eredmeny.innerHTML = "Nyert"
         } else if
             (document.jatekosKep.src.indexOf("/img/papir.jpg") >= 0 && document.gepKep.src.indexOf("/img/ko.jpg") >= 0) {
-            console.log("Nyert");
+            eredmeny.innerHTML = "Nyert"
         } else if
             (document.jatekosKep.src.indexOf("/img/ko.jpg") >= 0 && document.gepKep.src.indexOf("/img/gyik.jpg") >= 0) {
-            console.log("Nyert");
+            eredmeny.innerHTML = "Nyert"
         } else if
             (document.jatekosKep.src.indexOf("/img/gyik.jpg") >= 0 && document.gepKep.src.indexOf("/img/spock.jpg") >= 0) {
-            console.log("Nyert");
+            eredmeny.innerHTML = "Nyert"
         } else if
             (document.jatekosKep.src.indexOf("/img/spock.jpg") >= 0 && document.gepKep.src.indexOf("/img/ollo.jpg") >= 0) {
-            console.log("Nyert");
+            eredmeny.innerHTML = "Nyert"
         } else if
             (document.jatekosKep.src.indexOf("/img/ollo.jpg") >= 0 && document.gepKep.src.indexOf("/img/gyik.jpg") >= 0) {
-            console.log("Nyert");
+            eredmeny.innerHTML = "Nyert"
         } else if
             (document.jatekosKep.src.indexOf("/img/gyik.jpg") >= 0 && document.gepKep.src.indexOf("/img/papir.jpg") >= 0) {
-            console.log("Nyert");
+            eredmeny.innerHTML = "Nyert"
         } else if
             (document.jatekosKep.src.indexOf("/img/papir.jpg") >= 0 && document.gepKep.src.indexOf("/img/spock.jpg") >= 0) {
-            console.log("Nyert");
+            eredmeny.innerHTML = "Nyert"
         } else if
             (document.jatekosKep.src.indexOf("/img/spock.jpg") >= 0 && document.gepKep.src.indexOf("/img/ko.jpg") >= 0) {
-            console.log("Nyert");
+            eredmeny.innerHTML = "Nyert"
         } else if
             (document.jatekosKep.src.indexOf("/img/ko.jpg") >= 0 && document.gepKep.src.indexOf("/img/ollo.jpg") >= 0) {
-            console.log("Nyert");
+            eredmeny.innerHTML = "Nyert"
         } else {
-        console.log("Vesztett");
+            eredmeny.innerHTML = "Vesztett"
         }
 }
