@@ -12,10 +12,6 @@ h3 {
     margin-top: 20px;
 }
 
-.gomb {
-    text-align: center;
-}
-
 .col-8 {
     margin-top: 10px;
     text-align: center;
@@ -30,9 +26,13 @@ h3 {
     text-align: center;
 }
 
-.oldalGomb {
+.gombok {
     margin: 10px;
     box-shadow: 5px 5px 10px dimgray;
+}
+
+.gomb {
+    text-align: center;
 }
 
 .valasztasDiv {
