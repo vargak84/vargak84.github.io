@@ -14,12 +14,12 @@ gepEredmeny.innerHTML = szam2;
 
 //Szabályok
 function szabalyok() {
-    window.alert("Agymenők kő-papír-olló szabályai:\n\nAz olló elvágja a papírt.\nA papír bevonja a követ.\nA kő agyonüti a gyíkot.\nA gyík megmarja Spockot.\nSpock eltöri az ollót.\nAz olló lefejezi a gyíkot.\nA gyík megeszi a papírt.\nA papír cáfolja Spockot.\nSpock feloldja a követ.\nÉs mint általában, a kő eltöri az ollót.");
+    window.alert("Agymenők kő-papír-olló szabályai:\n\nAz olló elvágja a papírt.\nA papír bevonja a követ.\nA kő agyonüti a gyíkot.\nA gyík megmarja Spockot.\nSpock eltöri az ollót.\nAz olló lefejezi a gyíkot.\nA gyík megeszi a papírt.\nA papír cáfolja Spockot.\nSpock feloldja a követ.\nÉs mint általában, a kő eltöri az ollót.\n\nA játék 10 Ön nyert!es kézig megy!");
 }
 
 //Játék gomb
 function koValaszt() {
-    document.jatekosKep.src = "img/ko.jpg";
+    document.jatekosKep.src = document.vkokep.src;
     veletlenKep();
     kiNyer()
 }
@@ -68,60 +68,77 @@ function kiNyer() {
         eredmeny.innerHTML = "Döntetlen"
         } else if
             (document.jatekosKep.src.indexOf("/img/ollo.jpg") >= 0 && document.gepKep.src.indexOf("/img/papir.jpg") >= 0) {
-            eredmeny.innerHTML = "Nyert"
+            eredmeny.innerHTML = "Ön nyert!"
             szam1 += 1
             jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/papir.jpg") >= 0 && document.gepKep.src.indexOf("/img/ko.jpg") >= 0) {
-            eredmeny.innerHTML = "Nyert"
+            eredmeny.innerHTML = "Ön nyert!"
             szam1 += 1
             jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/ko.jpg") >= 0 && document.gepKep.src.indexOf("/img/gyik.jpg") >= 0) {
-            eredmeny.innerHTML = "Nyert"
+            eredmeny.innerHTML = "Ön nyert!"
             szam1 += 1
             jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/gyik.jpg") >= 0 && document.gepKep.src.indexOf("/img/spock.jpg") >= 0) {
-            eredmeny.innerHTML = "Nyert"
+            eredmeny.innerHTML = "Ön nyert!"
             szam1 += 1
             jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/spock.jpg") >= 0 && document.gepKep.src.indexOf("/img/ollo.jpg") >= 0) {
-            eredmeny.innerHTML = "Nyert"
+            eredmeny.innerHTML = "Ön nyert!"
             szam1 += 1
             jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/ollo.jpg") >= 0 && document.gepKep.src.indexOf("/img/gyik.jpg") >= 0) {
-            eredmeny.innerHTML = "Nyert"
+            eredmeny.innerHTML = "Ön nyert!"
             szam1 += 1
             jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/gyik.jpg") >= 0 && document.gepKep.src.indexOf("/img/papir.jpg") >= 0) {
-            eredmeny.innerHTML = "Nyert"
+            eredmeny.innerHTML = "Ön nyert!"
             szam1 += 1
             jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/papir.jpg") >= 0 && document.gepKep.src.indexOf("/img/spock.jpg") >= 0) {
-            eredmeny.innerHTML = "Nyert"
+            eredmeny.innerHTML = "Ön nyert!"
             szam1 += 1
             jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/spock.jpg") >= 0 && document.gepKep.src.indexOf("/img/ko.jpg") >= 0) {
-            eredmeny.innerHTML = "Nyert"
+            eredmeny.innerHTML = "Ön nyert!"
             szam1 += 1
             jatekosEredmeny.innerHTML = szam1
         } else if
             (document.jatekosKep.src.indexOf("/img/ko.jpg") >= 0 && document.gepKep.src.indexOf("/img/ollo.jpg") >= 0) {
-            eredmeny.innerHTML = "Nyert"
+            eredmeny.innerHTML = "Ön nyert!"
             szam1 += 1
             jatekosEredmeny.innerHTML = szam1
         } else {
-            eredmeny.innerHTML = "Vesztett"
+            eredmeny.innerHTML = "Vesztett!"
             szam2 += 1
             gepEredmeny.innerHTML = szam2
         }
-//        if (szam1 == 1 || szam2 == 1) {
-//            console.log("Vége a játéknak!")
-//        }
+        vege();
+}
+
+function vege() {
+    let letiltMezo1 = document.querySelector("h3[id = 'valassz']");
+    let letiltMezo2 = document.querySelector("div[class = 'valasztasDiv']");
+    let divH3 = document.querySelector("div[id = 'h3Mezo']");
+    let ujGomb = document.createElement("button");
+    let ujH = document.createElement("h3");
+    ujGomb.className = "btn btn-primary";
+    ujGomb.innerHTML = "Új játék";
+    ujGomb.addEventListener ("click", function() {
+        location.reload();
+      });
+    if (szam1 == 10 || szam2 == 10) {
+        letiltMezo1.hidden = true;
+        letiltMezo2.hidden = true;
+        divH3.appendChild(ujH);
+        ujH.appendChild(ujGomb);
+        }
 }
