@@ -1,0 +1,16 @@
+{
+  "message": [
+    {
+      "id": 1,
+      "message": "Próba 1"
+    },
+    {
+      "id": 2,
+      "message": "Próba 2"
+    },
+    {
+      "id": 3,
+      "message": "Próba 3"
+    }
+  ]
+}

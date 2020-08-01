@@ -2,17 +2,68 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="5;URL=kopapirollo.html">
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/index.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <title>Chat</title>
 </head>
 
 <body>
-  <h1 class="h1Elem">Légy üdvözölve az Agymenők kő-papír-olló játékban</h1>
-  <h2 class="h2Elem">Átirányítás folyamatban...</h2>
+    <h1>Chat</h1>
+
+    <div class="row elemek">
+        <div class="col-md-8 scrolling">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col" colspan="3">Üzenet</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th id="idMezo" scope="row">1</th>
+                        <td colspan="3">
+                            <div id="szovegMezo" class="alert alert-primary" role="alert">
+                                Tesztszöveg
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="elemek">
+        <form id="textarea" action="">
+            <textarea id="kuldesMezo" class="form-control textarea" aria-label="With textarea"></textarea>
+            <button onclick="kuldes()" type="button" id="kuldesGomb" class="btn btn-primary gomb">Küldés</button>
+            <button type="button" class="btn btn-danger gomb">Összes törlése!</button>
+        </form>
+    </div>
+
+    <script src="/js/chat.js"></script>
+
+    <!-- <script>let user = {
+            name: "Peter Big",
+            age: 21
+        };
+        let fetchOptions = {
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            credentials: 'same-origin',
+            body: JSON.stringify(user)
+        };
+        fetch("http://localhost:3000/message/", fetchOptions)
+            .then(resp => resp.json())
+            .then(json => console.log(json));
+    </script> -->
+
 </body>
 
 </html>
