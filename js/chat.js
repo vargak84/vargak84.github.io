@@ -52,6 +52,6 @@ function kuldes() {
       .then( json => console.log(json) );
 }
 
-function frissit() {
-  ujMezo()
-};
+/* function frissit() {
+  
+}; */
