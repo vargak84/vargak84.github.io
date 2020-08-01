@@ -6,4 +6,5 @@ let szovegMezo = document.querySelector("#szovegMezo");
 function kuldes() {
     let szoveg = kuldesMezo.value;
     console.log(szoveg);
+    console.log(szovegMezo.value);
 }
