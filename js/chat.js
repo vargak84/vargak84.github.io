@@ -1,6 +1,5 @@
 let kuldesGomb = document.querySelector("#kuldesGomb");
 let kuldesMezo = document.querySelector("#kuldesMezo");
-let idMezo = document.querySelectorAll("#idMezo");
 let szovegMezo = document.querySelector("#szovegMezo");
 let tbody = document.querySelector("#tbody");
 let szoveg;
@@ -12,8 +11,6 @@ function ujMezo() {
     let th = document.createElement("th");
     th.id = "idMezo";
     th.scope = "row";
-    forCiklus();
-    th.innerHTML = 1;
     tr.appendChild(th);
     let td = document.createElement("td");
     td.colSpan = 3;
@@ -24,10 +21,14 @@ function ujMezo() {
     div.setAttribute("role", "alert");
     div.innerHTML = "Tesztszöveg";
     td.appendChild(div);
+    let idMezo = document.querySelectorAll("#idMezo");
+    forCiklus();
+    th.innerHTML = idMezo.length + 1;
+    ;
   };
 
 function forCiklus() {
-    for (let i = 0; i < idMezo.length; i++) {
+    for (let i = 0; i < idMezo.length; i++){
       console.log(idMezo.length);
     }
   };
