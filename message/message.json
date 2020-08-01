@@ -1,16 +1,12 @@
 {
   "message": [
     {
-      "id": 1,
-      "message": "Próba 1"
+      "message": "Lili ül az anyja kezében!",
+      "id": 1
     },
     {
-      "id": 2,
-      "message": "Próba 2"
-    },
-    {
-      "id": 3,
-      "message": "Próba 3"
+      "message": "Lili ül az anyja kezében!",
+      "id": 2
     }
   ]
 }
