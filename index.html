@@ -21,7 +21,7 @@
                         <th scope="col" colspan="3">Üzenet</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="tbody">
                     <tr>
                         <th id="idMezo" scope="row">1</th>
                         <td colspan="3">
@@ -30,14 +30,7 @@
                             </div>
                         </td>
                     </tr>
-                    <tr>
-                        <th id="idMezo" scope="row">1</th>
-                        <td colspan="3">
-                            <div id="szovegMezo" class="alert alert-primary" role="alert">
-                                Tesztszöveg
-                            </div>
-                        </td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </div>
@@ -48,29 +41,11 @@
             <textarea id="kuldesMezo" class="form-control textarea" aria-label="With textarea"></textarea>
             <button onclick="kuldes()" type="button" id="kuldesGomb" class="btn btn-primary gomb">Küldés</button>
             <button type="button" class="btn btn-danger gomb">Összes törlése!</button>
+            <button onclick="frissit()" type="button">Frissít</button>
         </form>
     </div>
 
     <script src="/js/chat.js"></script>
-
-    <!-- <script>let user = {
-            name: "Peter Big",
-            age: 21
-        };
-        let fetchOptions = {
-            method: 'POST',
-            mode: 'cors',
-            cache: 'no-cache',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            credentials: 'same-origin',
-            body: JSON.stringify(user)
-        };
-        fetch("http://localhost:3000/message/", fetchOptions)
-            .then(resp => resp.json())
-            .then(json => console.log(json));
-    </script> -->
 
 </body>
 
