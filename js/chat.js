@@ -28,18 +28,15 @@ function ujMezo() {
     div.innerHTML = "Tesztszöveg";
     td.appendChild(div);
     forCiklus();
-    th.innerHTML = idMezo.length + 1;
+    th.innerHTML = idMezo.length + 1
   };
 
 function forCiklus() {
     for (let i = 0; i < idMezo.length; i++){
-      
-      console.log(idMezo.length);
     }
   };
 
 function kuldes() {
-    ujMezo()
     let message = {
       message: kuldesMezo.value
     };
@@ -56,6 +53,7 @@ function kuldes() {
     fetch( "http://localhost:3000/message/", fetchOptions )
       .then( resp => resp.json() )
       .then( json => console.log(json) );
+    ujMezo()
 }
 
 function adatfissites(url) {
@@ -70,6 +68,6 @@ function adatfissites(url) {
     )
 };
 
- adatfissites("http://localhost:3000/message/").then(
+adatfissites("http://localhost:3000/message/").then(
   data => console.log(data)
 );
