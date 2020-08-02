@@ -3,9 +3,15 @@ let kuldesMezo = document.querySelector("#kuldesMezo");
 let szovegMezo = document.querySelector("#szovegMezo");
 let tbody = document.querySelector("#tbody");
 let szoveg;
+let idMezo = document.querySelectorAll("#idMezo");
+
+//Adatbekérés
+
+
 
 //Mező elkészítés
 function ujMezo() {
+    idMezo = document.querySelectorAll("#idMezo");
     let tr = document.createElement("tr");
     tbody.appendChild(tr);
     let th = document.createElement("th");
@@ -21,14 +27,13 @@ function ujMezo() {
     div.setAttribute("role", "alert");
     div.innerHTML = "Tesztszöveg";
     td.appendChild(div);
-    let idMezo = document.querySelectorAll("#idMezo");
     forCiklus();
     th.innerHTML = idMezo.length + 1;
-    ;
   };
 
 function forCiklus() {
     for (let i = 0; i < idMezo.length; i++){
+      
       console.log(idMezo.length);
     }
   };
@@ -53,6 +58,18 @@ function kuldes() {
       .then( json => console.log(json) );
 }
 
-/* function frissit() {
-  
-}; */
+function adatfissites(url) {
+  let fetchOptions = {
+    method: 'GET',
+    mode: 'cors',
+    cache: 'no-cache',
+};
+    return fetch( url, fetchOptions ).then(
+      resp => resp.json(),
+      err => console.error(err)
+    )
+};
+
+ adatfissites("http://localhost:3000/message/").then(
+  data => console.log(data)
+);
