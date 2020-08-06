@@ -5,38 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/chat.css">
-    <title>Chat</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Random place generator</title>
 </head>
 
 <body>
-    <h1>Chat</h1>
-
-    <div class="row elemek">
-        <div class="col-md-8 scrolling">
-            <table class="table table-dark">
-                <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col" colspan="3">Üzenet</th>
-                    </tr>
-                </thead>
-                <tbody id="tbody">
-                </tbody>
-            </table>
+    <div class="bodyTorzs form-group">
+        <h1>Random place generator</h1>
+        <div class="digits">
+            <input id="digitOne" class="nav-link disabled form-control" type="text" value="0">
+            <input id="digitTwo" class="nav-link disabled form-control" type="text" value="0">
+            <input id="digitThree" class="nav-link disabled form-control" type="text" value="0">
+            <input id="digitFour" class="nav-link disabled form-control" type="text" value="0">
+            <input id="digitFive" class="nav-link disabled form-control" type="text" value="0">
+            <input id="digitSix" class="nav-link disabled form-control" type="text" value="0">
+            <input id="digitSeven" class="nav-link disabled form-control" type="text" value="0">
+            <input id="digitEight" class="nav-link disabled form-control" type="text" value="0">
+            <input id="digitNine" class="nav-link disabled form-control" type="text" value="0">
+            <input id="digitTen" class="nav-link disabled form-control" type="text" value="0">
+        </div>
+        <div class="button">
+            <button onclick="general()" class="btn btn-primary">Generátor</button>
         </div>
     </div>
 
-    <div class="elemek">
-        <form id="textarea" action="">
-            <textarea id="kuldesMezo" class="form-control textarea" aria-label="With textarea"></textarea>
-            <button onclick="kuldes()" type="button" id="kuldesGomb" class="btn btn-primary gomb">Küldés</button>
-            <button type="button" class="btn btn-danger gomb">Összes törlése!</button>
-            <button onclick="frissit()" type="button">Frissít</button>
-        </form>
-    </div>
-
-    <script src="/js/chat.js"></script>
+    <script src="/js/index.js"></script>
 
 </body>
 
