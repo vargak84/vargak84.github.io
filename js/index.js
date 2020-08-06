@@ -20,41 +20,40 @@ function general() {
     digitSeven.value = 0;
     digitEight.value = 0;
     digitNine.value = 0;
-    digitTen.value = 0;    
+    digitTen.value = 0;
 
     minszam = 0;
     maxszam = 9;
     let randomNumber = minszam + Math.floor(Math.random() * (maxszam - minszam + 1));
-    console.log(randomNumber);
 
     if (randomNumber == 0) {
         digitOne.value = 1;
     } else
-    if (randomNumber == 1) {
-        digitTwo.value = 1;
-    } else
-    if (randomNumber == 2) {
-        digitThree.value = 1;
-    } else
-    if (randomNumber == 3) {
-        digitFour.value = 1;
-    } else
-    if (randomNumber == 4) {
-        digitFive.value = 1;
-    } else
-    if (randomNumber == 5) {
-        digitSix.value = 1;
-    } else
-    if (randomNumber == 6) {
-        digitSeven.value = 1;
-    } else
-    if (randomNumber == 7) {
-        digitEight.value = 1;
-    } else
-    if (randomNumber == 8) {
-        digitNine.value = 1;
-    } else
-    if (randomNumber == 9) {
-        digitTen.value = 1;
-    }
+        if (randomNumber == 1) {
+            digitTwo.value = 1;
+        } else
+            if (randomNumber == 2) {
+                digitThree.value = 1;
+            } else
+                if (randomNumber == 3) {
+                    digitFour.value = 1;
+                } else
+                    if (randomNumber == 4) {
+                        digitFive.value = 1;
+                    } else
+                        if (randomNumber == 5) {
+                            digitSix.value = 1;
+                        } else
+                            if (randomNumber == 6) {
+                                digitSeven.value = 1;
+                            } else
+                                if (randomNumber == 7) {
+                                    digitEight.value = 1;
+                                } else
+                                    if (randomNumber == 8) {
+                                        digitNine.value = 1;
+                                    } else
+                                        if (randomNumber == 9) {
+                                            digitTen.value = 1;
+                                        }
 };
