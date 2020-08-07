@@ -8,19 +8,13 @@ let digitSeven = document.querySelector("#digitSeven");
 let digitEight = document.querySelector("#digitEight");
 let digitNine = document.querySelector("#digitNine");
 let digitTen = document.querySelector("#digitTen");
+let digitAll = document.querySelectorAll(".digit");
 
-function general() {
+function generate() {
 
-    digitOne.value = 0;
-    digitTwo.value = 0;
-    digitThree.value = 0;
-    digitFour.value = 0;
-    digitFive.value = 0;
-    digitSix.value = 0;
-    digitSeven.value = 0;
-    digitEight.value = 0;
-    digitNine.value = 0;
-    digitTen.value = 0;
+    for (let i = 0; i < digitAll.length; i++) {
+        digitAll[i].value = 0;
+    };
 
     minszam = 0;
     maxszam = 9;
