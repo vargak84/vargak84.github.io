@@ -6,6 +6,7 @@
 body {
     background-image: url(/img/virag.jpg);
     background-size: 200px;
+    font-size: 500%;
 }
 
 .foDiv {
@@ -17,13 +18,16 @@ body {
     width: 50%;
     margin: 50px auto;
     text-align: center;
+    border-radius: 30px;
 }
 
 h1 {
     text-decoration: underline;
+    margin-top: 20px;
     margin-bottom: 30px;
 }
 
 .szoveg {
     text-shadow: 3px 3px black;
+    font-size: 70%;
 }
