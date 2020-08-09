@@ -10,7 +10,7 @@ kep.style.borderRadius = "10px";
 kep.style.boxShadow = "2px 2px 10px black";
 
 // Set the date we're counting down to
-var countDownDate = new Date("Aug 9, 2020 08:36:00").getTime();
+var countDownDate = new Date("Aug 15, 2020 18:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
