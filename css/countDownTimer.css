@@ -6,7 +6,7 @@
 body {
     background-image: url(/img/virag.jpg);
     background-size: 200px;
-    font-size: 500%;
+    font-size: 400%;
 }
 
 .foDiv {
@@ -15,7 +15,7 @@ body {
     color: #F6DA79;
     border: solid 2px black;
     box-shadow: 5px 5px 10px black;
-    width: 50%;
+    width: 60%;
     margin: 50px auto;
     text-align: center;
     border-radius: 30px;
