@@ -1,0 +1,14 @@
+.foDiv {
+    background-color: #154A74;
+    color: #F6DA79;
+    border: solid 2px black;
+    box-shadow: 5px 5px 10px grey;
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+h1 {
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
