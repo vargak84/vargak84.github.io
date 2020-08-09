@@ -1,10 +1,16 @@
+body {
+    background-image: url(/img/virag.jpg);
+    background-size: 200px;
+}
+
 .foDiv {
-    background-color: #154A74;
+    
+    background-color: #2071b3;
     color: #F6DA79;
     border: solid 2px black;
     box-shadow: 5px 5px 10px grey;
     width: 50%;
-    margin: 20px auto;
+    margin: 50px auto;
     text-align: center;
 }
 

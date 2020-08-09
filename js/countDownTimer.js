@@ -2,7 +2,7 @@ let elrejt1 = document.querySelector("#elrejt1");
 let elrejt2 = document.querySelector("#elrejt2");
 
 // Set the date we're counting down to
-var countDownDate = new Date("Aug 9, 2020 06:59:00").getTime();
+var countDownDate = new Date("Aug 15, 2020 18:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -20,8 +20,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="wedding"
-  document.getElementById("wedding").innerHTML = days + "nap " + hours + "óra "
-  + minutes + "perc " + seconds + "másodperc ";
+  document.getElementById("wedding").innerHTML = days + "n " + hours + "ó "
+  + minutes + "p " + seconds + "mp ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
