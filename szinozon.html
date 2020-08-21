@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Színözön</title>
+</head>
+
+<body>
+    <h1 class="szoveg">Üdözöljük a színözön játékban!</h1>
+    <div class="table1">
+        <h3>A megoldás:</h3>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td id="megoldasElsoGolyoMezo"></td>
+                    <td id="megoldasMasodikGolyoMezo"></td>
+                    <td id="megoldasHarmadikGolyoMezo"></td>
+                    <td id="megoldasNegyedikGolyoMezo"></td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="megoldasMutat()" class="btn btn-danger mutatGomb">Mutat</button>
+    </div>
+    <div id="hozzaad" class="table1">
+        <table id="rejt2" class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <button id="ellenorzesGomb" class="btn btn-success">Ellenőrzés</button>
+    </div>
+
+    
+    <div class="table2">
+        <h3 class="szoveg">Válassz egy színt!</h3>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td id="pirosGolyo"><img src="/img/piros.png" alt="piros"></td>
+                    <td id="feherGolyo"><img src="/img/feher.png" alt="feher"></td>
+                    <td id="kekGolyo"><img src="/img/kek.png" alt="kek"></td>
+                    <td id="rozsaGolyo"><img src="/img/rozsaszin.png" alt="rozsaszin"></td>
+                    <td id="narancsGolyo"><img src="/img/narancs.png" alt="narancs"></td>
+                    <td id="lilaGolyo"><img src="/img/lila.png" alt="lila"></td>
+                    <td id="sargaGolyo"><img src="/img/sarga.png" alt="sarga"></td>
+                    <td id="zoldGolyo"><img src="/img/zold.png" alt="zold"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="/js/szinozon.js"></script>
+
+</body>
+
+</html>

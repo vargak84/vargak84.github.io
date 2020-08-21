@@ -1,0 +1,31 @@
+body {
+    background-color: lawngreen;
+}
+
+.szoveg {
+    text-align: center;
+    width: 60%;
+    margin: 30px auto;
+}
+
+.table1 {
+    text-align: center;
+    width: 25%;
+    margin: auto;
+    border: solid 2px black;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.mutatGomb {
+    margin-bottom: 20px;
+}
+
+.table2 {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    border: solid 2px black;
+    margin-bottom: 20px;
+    padding: 10px;
+}
