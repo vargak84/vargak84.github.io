@@ -1,3 +1,14 @@
-.dropdown-submenu {
-    position: relative;
-  }
+body {
+  background-color: palegoldenrod;
+}
+
+#udvozlet {
+  text-align: center;
+  margin: 20px auto 50px;
+}
+
+.szoveg {
+  width: 50%;
+  margin: auto;
+  text-align: justify;
+}

@@ -16,6 +16,25 @@
 
 <body>
 
+  <!-- Üdvözlő modal -->
+
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Add meg a keresztneved!</h4>
+        </div>
+        <div class="modal-body">
+          <input id="felhasznaloNev" type="text" value="Vendég">
+          <button id="okeGomb" onclick="okeUdvozlet()" type="button" class="btn btn-primary" data-dismiss="modal">Oké</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light" id="main_navbar">
     <a class="navbar-brand" href="index.html"><img src="img/VK.png" height="30px" width="auto" alt="VK"></a>
@@ -38,19 +57,21 @@
             Munkáim
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" target="_blank" href="randomplacegenerator.html">Random place generátor</a></li>
+            <li><a class="dropdown-item" target="_blank" href="randomplacegenerator.html">Random place generátor</a>
+            </li>
             <div class="dropdown-divider"></div>
         </li>
         <li class="nav-item dropdown">
           <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Rózsa - Pál esküvő
+            aria-haspopup="true" aria-expanded="false">
+            Rózsa - Pál esküvő
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-              <li><a class="dropdown-item" target="_blank" href="rozsapaleskuvo.html">Visszaszámláló</a></li>
-              <li><a class="dropdown-item" target="_blank" href="rozsapaleskuvozene.html">Kerti parti/Szertertás zenéi</a></li>
+            <li><a class="dropdown-item" target="_blank" href="rozsapaleskuvo.html">Visszaszámláló</a></li>
+            <li><a class="dropdown-item" target="_blank" href="rozsapaleskuvozene.html">Kerti parti/Szertertás zenéi</a>
+            </li>
           </ul>
-      </li>
+        </li>
         <li class="nav-item dropdown">
           <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
@@ -65,15 +86,20 @@
       </ul>
       </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <form class="form-inline my-2 my-lg-0 disabled">
+        <input class="form-control mr-sm-2 disabled" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 disabled" type="submit">Search</button>
       </form>
     </div>
   </nav>
 
   <!-- html tartalom -->
   <h1 id="udvozlet"></h1>
+<div class="szoveg">
+  <p>Ez az oldal azért jött létre, hogy egy helyen meglegyenek az általam készített weboldalak.
+    Jelenleg még tanulom a webfejlesztést, bővebben a <a href="#">bemutatkozás</a> aloldalon olvashatsz rólam.
+  </p>
+</div>
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/popper.min.js"></script>
