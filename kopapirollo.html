@@ -15,13 +15,45 @@
         <h1>Agymenők kő-papír-olló</h1>
     </div>
 
+    <!-- Button trigger modal -->
     <div class="gomb">
-        <button onclick="szabalyok()" class="btn btn-primary gombok">Szabályok</button>
+        <button type="button" class="btn btn-primary gombok" data-toggle="modal" data-target="#exampleModalCenter">
+            Szabályok
+        </button>
     </div>
 
-    <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Agymenők kő-papír-olló szabályai:</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Az olló elvágja a papírt.</p>
+                    <p>A papír bevonja a követ.</p>
+                    <p>A kő agyonüti a gyíkot.</p>
+                    <p>A gyík megmarja Spockot.</p>
+                    <p>Spock eltöri az ollót.</p>
+                    <p>Az olló lefejezi a gyíkot.</p>
+                    <p>A gyík megeszi a papírt.</p>
+                    <p>A papír cáfolja Spockot.</p>
+                    <p>Spock feloldja a követ.</p>
+                    <p>És mint általában, a kő eltöri az ollót.</p>
+                    <p class="pElem">A játék 10 nyertes kézig megy!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Bezár</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="foDiv">
             <table class="table table-hover table-dark jatekTable">
                 <thead>
                     <tr>
@@ -36,7 +68,8 @@
                                     alt="Sheldon"></small>
                         </td>
                         <td>
-                            <small><img name="gepKep" class="valaszKep" src="/img/kopapirollo/sheldon.jpg" alt="Sheldon"></small>
+                            <small><img name="gepKep" class="valaszKep" src="/img/kopapirollo/sheldon.jpg"
+                                    alt="Sheldon"></small>
                         </td>
                     </tr>
                     <tr>
@@ -49,8 +82,6 @@
                 </tbody>
             </table>
         </div>
-        <div class="col-2"></div>
-    </div>
 
     <div id="h3Mezo">
         <h3 id="valassz">Válassz!</h3>
@@ -64,6 +95,8 @@
         <img name="vspockkep" onclick="spockValaszt()" class="valaszKep" src="/img/kopapirollo/spock.jpg" alt="Spock">
     </div>
     <script src="/js/kopapirollo.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
