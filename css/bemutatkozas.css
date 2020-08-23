@@ -1,0 +1,18 @@
+body {
+    background-color: palegoldenrod;
+}
+
+#reszveteliIgazolas {
+    text-align: center;
+}
+
+.szoveg {
+    text-align: justify;
+    width: 60%;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px auto;
+}
