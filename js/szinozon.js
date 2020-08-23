@@ -17,18 +17,20 @@ let rejt1 = document.querySelector(".table2");
 let rejt2 = document.querySelector("#rejt2");
 let rejt3 = document.querySelector("#ellenorzesGomb");
 let hozzaad = document.querySelector("#hozzaad");
+let mutatGomb = document.querySelector("#mutatGomb");
+
 
 //Véletlenkép generátor
 function veletlenKep() {
     kep = new Array()
-    kep[1] = "img/piros.png"
-    kep[2] = "img/feher.png"
-    kep[3] = "img/kek.png"
-    kep[4] = "img/rozsaszin.png"
-    kep[5] = "img/narancs.png"
-    kep[6] = "img/lila.png"
-    kep[7] = "img/sarga.png"
-    kep[8] = "img/zold.png"
+    kep[1] = "img/szinozon/piros.png"
+    kep[2] = "img/szinozon/feher.png"
+    kep[3] = "img/szinozon/kek.png"
+    kep[4] = "img/szinozon/rozsaszin.png"
+    kep[5] = "img/szinozon/narancs.png"
+    kep[6] = "img/szinozon/lila.png"
+    kep[7] = "img/szinozon/sarga.png"
+    kep[8] = "img/szinozon/zold.png"
 
     ry = Math.floor(Math.random() * kep.length)
     if (ry == 0)
@@ -81,4 +83,5 @@ function megoldasMutat() {
     });
     hozzaad.appendChild(vesztettel)
     hozzaad.appendChild(ujJatekGomb)
+    mutatGomb.hidden = true;
 }
