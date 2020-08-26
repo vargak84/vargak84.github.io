@@ -131,7 +131,7 @@ function zoldGolyoValaszt() {
 }
 
 let cellaIdValos = 1;
-let cellaKivalasztas = document.querySelector("td[id = cellaIdValos]");
+/* let cellaKivalasztas = document.querySelector("td[id = '1']"); */
 
 
 
