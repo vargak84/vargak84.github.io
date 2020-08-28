@@ -62,6 +62,7 @@ ujTablaSor();
 
 /* Játék */
 let jatekosTomb = [];
+let valasztottSzinTomb= [];
 
 let pirosGolyo = document.querySelector("#pirosGolyo");
 let feherGolyo = document.querySelector("#feherGolyo");
@@ -77,6 +78,7 @@ function pirosGolyoValaszt() {
     let pirosgolyo = document.createElement("img");
     pirosgolyo.src = "img/szinozon/piros.png";
     jatekosTomb.push(pirosgolyo);
+    valasztottSzinTomb.push(pirosgolyo);
     jatekosTombHosszEllenorzes()
     golyoCellabaTesz()
 }
@@ -85,55 +87,67 @@ function feherGolyoValaszt() {
     let fehergolyo = document.createElement("img");
     fehergolyo.src = "img/szinozon/feher.png";
     jatekosTomb.push(fehergolyo);
+    valasztottSzinTomb.push(fehergolyo);
     jatekosTombHosszEllenorzes()
+    golyoCellabaTesz()
 }
 
 function kekGolyoValaszt() {
     let kekgolyo = document.createElement("img");
     kekgolyo.src = "img/szinozon/kek.png";
     jatekosTomb.push(kekgolyo);
+    valasztottSzinTomb.push(kekgolyo);
     jatekosTombHosszEllenorzes()
+    golyoCellabaTesz()
 }
 
 function rozsaGolyoValaszt() {
     let rozsagolyo = document.createElement("img");
-    rozsagolyo.src = "img/szinozon/rozsa.png";
+    rozsagolyo.src = "img/szinozon/rozsaszin.png";
     jatekosTomb.push(rozsagolyo);
+    valasztottSzinTomb.push(rozsagolyo);
     jatekosTombHosszEllenorzes()
+    golyoCellabaTesz()
 }
 
 function narancsGolyoValaszt() {
     let narancsgolyo = document.createElement("img");
     narancsgolyo.src = "img/szinozon/narancs.png";
     jatekosTomb.push(narancsgolyo);
+    valasztottSzinTomb.push(narancsgolyo);
     jatekosTombHosszEllenorzes()
+    golyoCellabaTesz()
 }
 
 function lilaGolyoValaszt() {
     let lilagolyo = document.createElement("img");
     lilagolyo.src = "img/szinozon/lila.png";
     jatekosTomb.push(lilagolyo);
+    valasztottSzinTomb.push(lilagolyo);
     jatekosTombHosszEllenorzes()
+    golyoCellabaTesz()
 }
 
 function sargaGolyoValaszt() {
     let sargagolyo = document.createElement("img");
     sargagolyo.src = "img/szinozon/sarga.png";
     jatekosTomb.push(sargagolyo);
+    valasztottSzinTomb.push(sargagolyo);
     jatekosTombHosszEllenorzes()
+    golyoCellabaTesz()
 }
 
 function zoldGolyoValaszt() {
     let zoldgolyo = document.createElement("img");
     zoldgolyo.src = "img/szinozon/zold.png";
     jatekosTomb.push(zoldgolyo);
+    valasztottSzinTomb.push(zoldgolyo);
     jatekosTombHosszEllenorzes()
+    golyoCellabaTesz()
 }
 
 let cellaIdValos = 1;
-/* let cellaKivalasztas = document.querySelector("td[id = '1']"); */
-
-
+let aktivCella = document.getElementById(cellaIdValos);
 
 
 
@@ -153,20 +167,28 @@ function ujTablaSor() {
 
 function jatekosTombHosszEllenorzes() {
     for (let i = 0; i < jatekosTomb.length; i++) {
-        if (jatekosTomb.length > 4 ) {
+        if (jatekosTomb.length > 4) {
             jatekosTomb.pop();
-
-        };
+        }
+    }
+    if (cellaIdValos == 4) {
+        ujTablaSor();
     }
 }
 
 function golyoCellabaTesz() {
-    for (let i = 0; i < jatekosTomb.length; i++) {
-        console.log(cellaId);
+    for (let i = 0; i < valasztottSzinTomb.length; i++) {
+        aktivCella.appendChild(valasztottSzinTomb[0]);
+        aktivCellaValtoztat();
+        valasztottSzinTomb = [];
     }
+
 }
 
-
+function aktivCellaValtoztat() {
+    cellaIdValos += 1;
+    aktivCella = document.getElementById(cellaIdValos);
+}
 
 
 
@@ -207,3 +229,9 @@ function megoldasMutat() {
     hozzaad.appendChild(ujJatekGomb)
     mutatGomb.hidden = true;
 }
+
+
+
+/* var b = 4;
+var x = function () {return 12 * b};
+document.getElementById("demo").innerHTML = x() */
