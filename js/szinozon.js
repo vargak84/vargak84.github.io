@@ -177,6 +177,7 @@ function jatekosTombHosszEllenorzes() {
 function golyoCellabaTesz() {
     for (let i = 0; i < valasztottSzinTomb.length; i++) {
         aktivCella.appendChild(valasztottSzinTomb[0]);
+        /* egyezesVizsgalat(); */
         aktivCellaValtoztat();
         valasztottSzinTomb = [];
     }
@@ -231,7 +232,19 @@ function megoldasMutat() {
     mutatGomb.hidden = true;
 }
 
-
+/* function egyezesVizsgalat() {
+    for (let i = 0; i < megoldasTomb.length; i++) {
+        let szinEgyezes = false;
+        let helyEgyezes = false;
+        if (valasztottSzinTomb[0].src.indexOf("img/szinozon/piros.png") >= 0 && megoldasTomb[i].src.indexOf(("img/szinozon/piros.png")) >= 0) {
+            szinEgyezes = true;
+        }
+        if (megoldasTomb[0].src = "img/szinozon/piros.png") {
+            helyEgyezes = true;
+        }
+        console.log(helyEgyezes, szinEgyezes);
+    }
+} */
 
 /* var b = 4;
 var x = function () {return 12 * b};
