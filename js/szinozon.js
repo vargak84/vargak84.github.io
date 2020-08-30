@@ -185,7 +185,7 @@ function golyoCellabaTesz() {
 
 function aktivCellaValtoztat() {
     cellaIdValos += 1;
-    egeszszamVizsgalo = cellaIdValos / 4 - 0.25;
+    egeszszamVizsgalo = cellaIdValos / 4;
     if (Number.isInteger(egeszszamVizsgalo) == true) {
         ujTablaSor();
     }
