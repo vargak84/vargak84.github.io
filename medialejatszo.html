@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/medialejatszo.css">
+    <title>Média lejátszó</title>
+</head>
+
+<body>
+    <h1>Jó szórakozást!</h1>
+    <video id="my-video" class="video-js" controls preload="auto" width="640" height="264" poster="/img/medialejatszo/tv_maci.jpg"
+        data-setup="{}">
+        <source src="media/medialejatszo/TV_Maci.mp4" type="video/mp4" />
+        <source src="" type="video/webm" />
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+    </video>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Következő:</span>
+        </div>
+        <input type="text" class="form-control" disabled aria-label="Default"
+            aria-describedby="inputGroup-sizing-default">
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button onclick="valtoztat()" class="btn btn-success" type="button">Indít!</button>
+        </div>
+        <select class="custom-select" id="inputGroupSelect03">
+          <option selected>Válassz...</option>
+          
+        </select>
+      </div>
+
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+    <script src="js/medialejatszo.js"></script>
+
+
+</body>
+
+</html>
