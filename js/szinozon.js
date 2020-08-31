@@ -45,13 +45,13 @@ let megoldasNegyedikGolyoMezo = document.querySelector("#megoldasNegyedikGolyoMe
 
 for (let i = 0; i < megoldasTomb.length; i++) {
     megoldasElsoGolyoMezo.appendChild(megoldasTomb[0]);
-    //megoldasElsoGolyo.hidden = true;
+    megoldasElsoGolyo.hidden = true;
     megoldasMasodikGolyoMezo.appendChild(megoldasTomb[1]);
-    //megoldasMasodikGolyo.hidden = true;
+    megoldasMasodikGolyo.hidden = true;
     megoldasHarmadikGolyoMezo.appendChild(megoldasTomb[2]);
-    //megoldasHarmadikGolyo.hidden = true;
+    megoldasHarmadikGolyo.hidden = true;
     megoldasNegyedikGolyoMezo.appendChild(megoldasTomb[3]);
-    //megoldasNegyedikGolyo.hidden = true;
+    megoldasNegyedikGolyo.hidden = true;
 }
 
 let tableTbody = document.querySelector("#tableTbody");
@@ -177,7 +177,6 @@ function jatekosTombHosszEllenorzes() {
 function golyoCellabaTesz() {
     for (let i = 0; i < valasztottSzinTomb.length; i++) {
         aktivCella.appendChild(valasztottSzinTomb[0]);
-        /* egyezesVizsgalat(); */
         aktivCellaValtoztat();
         valasztottSzinTomb = [];
     }
@@ -192,6 +191,45 @@ function aktivCellaValtoztat() {
     aktivCella = document.getElementById(cellaIdValos);
 }
 
+function egyezesVizsgalat() {
+    let eredmeny = new Array()
+
+    for (let i = 0; i < megoldasTomb.length; i++) {
+        let megoldasSzin = megoldasTomb[i];
+
+        let teljesEgyezes = false;
+        let szinEgyezes = false;
+        for (let j = 0; j < jatekosTomb.length; j++) {
+
+            // szin egyezés
+            if (megoldasTomb[i].src == jatekosTomb[j].src) {
+                szinEgyezes = true;
+
+                // szin egyezésen belül még a hely is egyezik
+                if (i == j) {
+                    teljesEgyezes = true;
+                }
+            }
+        }
+
+        if (teljesEgyezes) { eredmeny[i] = "green"; }  // teljes egyezést
+        else if (szinEgyezes) { eredmeny[i] = "red"; }  // szin egyezést
+        else { eredmeny[i] = null; } // nincs egyezést
+
+    }
+
+    let cellaMinNegy = document.getElementById(aktivCella.id - 4);
+    cellaMinNegy.style.backgroundColor = eredmeny[0];
+    let cellaMinHarom = document.getElementById(aktivCella.id - 3);
+    cellaMinHarom.style.backgroundColor = eredmeny[1];
+    let cellaMinKetto = document.getElementById(aktivCella.id - 2);
+    cellaMinKetto.style.backgroundColor = eredmeny[2];
+    let cellaMinEgy = document.getElementById(aktivCella.id - 1);
+    cellaMinEgy.style.backgroundColor = eredmeny[3];
+    console.log(eredmeny);
+    jatekosTomb = [];
+}
+
 
 
 
@@ -201,14 +239,6 @@ let rejt2 = document.querySelector("#rejt2");
 let rejt3 = document.querySelector("#ellenorzesGomb");
 let hozzaad = document.querySelector("#hozzaad");
 let mutatGomb = document.querySelector("#mutatGomb");
-
-
-
-
-
-
-
-
 
 /* MutatGomb megnyomása */
 function megoldasMutat() {
@@ -232,6 +262,13 @@ function megoldasMutat() {
     mutatGomb.hidden = true;
 }
 
+function debug() {
+    megoldasElsoGolyo.hidden = false;
+    megoldasMasodikGolyo.hidden = false;
+    megoldasHarmadikGolyo.hidden = false;
+    megoldasNegyedikGolyo.hidden = false;
+}
+
 /* function egyezesVizsgalat() {
     for (let i = 0; i < megoldasTomb.length; i++) {
         let szinEgyezes = false;
@@ -250,45 +287,4 @@ function megoldasMutat() {
 var x = function () {return 12 * b};
 document.getElementById("demo").innerHTML = x() */
 
-/*      var megoldasTomb = new Array()
-        megoldasTomb[0] = "img/szinozon/piros.png"
-        megoldasTomb[1] = "img/szinozon/kek.png"
-        megoldasTomb[2] = "img/szinozon/rozsaszin.png"
-        megoldasTomb[3] = "img/szinozon/sarga.png"
 
-        var jatekosTomb = new Array()
-        jatekosTomb[0] = "img/szinozon/piros.png"
-        jatekosTomb[1] = "img/szinozon/feher.png"
-        jatekosTomb[2] = "img/szinozon/kek.png"
-        jatekosTomb[3] = "img/szinozon/rozsaszin.png" */
-
-function egyezesVizsgalat() {
-    let eredmeny = new Array()
-
-    for (let i = 0; i < megoldasTomb.length; i++) {
-        let megoldasSzin = megoldasTomb[i];
-
-        let teljesEgyezes = false;
-        let szinEgyezes = false;
-        for (let j = 0; j < jatekosTomb.length; j++) {
-
-            // szin egyezés
-            if (megoldasTomb[i] == jatekosTomb[j]) {
-                szinEgyezes = true;
-
-                // szin egyezésen belül még a hely is egyezik
-                if (i == j) {
-                    teljesEgyezes = true;
-                }
-            }
-        }
-
-        if (teljesEgyezes) { eredmeny[i] = 2; }  // 2 jelenit a teljes egyezést
-        else if (szinEgyezes) { eredmeny[i] = 1; }  // 1 jelenit a szin egyezést
-        else { eredmeny[i] = 0; } // 0 jelenit a nem egyezést 
-    }
-
-    return eredmeny;
-}
-
-/* console.log(egyezesVizsgalat()); */
