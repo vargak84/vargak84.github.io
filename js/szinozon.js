@@ -194,15 +194,15 @@ function aktivCellaValtoztat() {
 function egyezesVizsgalat() {
     let eredmeny = new Array()
 
-    for (let i = 0; i < megoldasTomb.length; i++) {
+    for (let i = 0; i < jatekosTomb.length; i++) {
         let megoldasSzin = megoldasTomb[i];
 
         let teljesEgyezes = false;
         let szinEgyezes = false;
-        for (let j = 0; j < jatekosTomb.length; j++) {
+        for (let j = 0; j < megoldasTomb.length; j++) {
 
             // szin egyezés
-            if (megoldasTomb[i].src == jatekosTomb[j].src) {
+            if (megoldasTomb[j].src == jatekosTomb[i].src) {
                 szinEgyezes = true;
 
                 // szin egyezésen belül még a hely is egyezik
@@ -289,3 +289,46 @@ function debug() {
 /* var b = 4;
 var x = function () {return 12 * b};
 document.getElementById("demo").innerHTML = x() */
+
+
+/* function egyezesVizsgalat() {
+    let eredmeny = new Array()
+
+    for (let i = 0; i < megoldasTomb.length; i++) {
+        let megoldasSzin = megoldasTomb[i];
+
+        let teljesEgyezes = false;
+        let szinEgyezes = false;
+        for (let j = 0; j < jatekosTomb.length; j++) {
+
+            // szin egyezés
+            if (megoldasTomb[i].src == jatekosTomb[j].src) {
+                szinEgyezes = true;
+
+                // szin egyezésen belül még a hely is egyezik
+                if (i == j) {
+                    teljesEgyezes = true;
+                }
+            }
+        }
+
+        if (teljesEgyezes) { eredmeny[i] = "green"; }  // teljes egyezést
+        else if (szinEgyezes) { eredmeny[i] = "red"; }  // szin egyezést
+        else { eredmeny[i] = null; } // nincs egyezést
+
+        console.clear();
+        console.log(eredmeny);
+        console.log(megoldasTomb);
+        console.log(jatekosTomb);
+    }
+
+    let cellaMinNegy = document.getElementById(aktivCella.id - 4);
+    cellaMinNegy.style.backgroundColor = eredmeny[0];
+    let cellaMinHarom = document.getElementById(aktivCella.id - 3);
+    cellaMinHarom.style.backgroundColor = eredmeny[1];
+    let cellaMinKetto = document.getElementById(aktivCella.id - 2);
+    cellaMinKetto.style.backgroundColor = eredmeny[2];
+    let cellaMinEgy = document.getElementById(aktivCella.id - 1);
+    cellaMinEgy.style.backgroundColor = eredmeny[3];
+    jatekosTomb = [];
+} */
