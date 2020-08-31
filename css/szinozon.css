@@ -29,3 +29,7 @@ body {
     margin-bottom: 20px;
     padding: 10px;
 }
+
+.modal-body {
+    font-size: 200%;
+}
