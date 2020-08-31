@@ -215,7 +215,11 @@ function egyezesVizsgalat() {
         if (teljesEgyezes) { eredmeny[i] = "green"; }  // teljes egyezést
         else if (szinEgyezes) { eredmeny[i] = "red"; }  // szin egyezést
         else { eredmeny[i] = null; } // nincs egyezést
-
+        
+        console.clear();
+        console.log(eredmeny);
+        console.log(megoldasTomb);
+        console.log(jatekosTomb);
     }
 
     let cellaMinNegy = document.getElementById(aktivCella.id - 4);
@@ -226,7 +230,6 @@ function egyezesVizsgalat() {
     cellaMinKetto.style.backgroundColor = eredmeny[2];
     let cellaMinEgy = document.getElementById(aktivCella.id - 1);
     cellaMinEgy.style.backgroundColor = eredmeny[3];
-    console.log(eredmeny);
     jatekosTomb = [];
 }
 
