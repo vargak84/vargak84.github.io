@@ -181,6 +181,7 @@ function golyoCellabaTesz() {
         /* aktivCellaValtoztat(); */
         /* valasztottSzinTomb = []; */
     }
+    valasztottSzinTomb = [];
     egeszszamVizsgalo = cellaIdValos / 4;
     if (Number.isInteger(egeszszamVizsgalo) == true) {
         /* ellenorzesGombKeszit() */
@@ -188,7 +189,6 @@ function golyoCellabaTesz() {
     } else {
         cellaIdValos += 1;
         aktivCella = document.getElementById(cellaIdValos);
-        valasztottSzinTomb = [];
     }
 }
 
@@ -202,6 +202,7 @@ function golyoTorol() {
             rejt3.hidden = true;
         }
         jatekosTomb.pop();
+        console.log(jatekosTomb)
     }
 
 function removeAttribute() {
