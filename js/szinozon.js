@@ -177,19 +177,38 @@ function jatekosTombHosszEllenorzes() {
 function golyoCellabaTesz() {
     for (let i = 0; i < valasztottSzinTomb.length; i++) {
         aktivCella.appendChild(valasztottSzinTomb[0]);
-        aktivCellaValtoztat();
+        /* aktivCellaValtoztat(); */
+        /* valasztottSzinTomb = []; */
+    }
+    egeszszamVizsgalo = cellaIdValos / 4;
+    if (Number.isInteger(egeszszamVizsgalo) == true) {
+        /* ellenorzesGombKeszit() */
+        rejt3.hidden = false;
+    } else {
+        cellaIdValos += 1;
+        aktivCella = document.getElementById(cellaIdValos);
         valasztottSzinTomb = [];
     }
 }
 
-function aktivCellaValtoztat() {
+/* function aktivCellaValtoztat() {
     cellaIdValos += 1;
     egeszszamVizsgalo = cellaIdValos / 4 - 0.25;
     if (Number.isInteger(egeszszamVizsgalo) == true) {
         ujTablaSor();
     }
     aktivCella = document.getElementById(cellaIdValos);
-}
+} */
+
+/* function ellenorzesGombKeszit() {
+    let jatekosDiv = document.querySelector("#hozzaad");
+    let ellenorzesGomb = document.createElement("button");
+    ellenorzesGomb.className = "btn btn-success";
+    ellenorzesGomb.id = "ellenorzesGomb";
+    ellenorzesGomb.setAttribute("onclick", "egyezesVizsgalat()");
+    ellenorzesGomb.innerHTML = "Ellenőrzés";
+    jatekosDiv.appendChild(ellenorzesGomb);
+} */
 
 function egyezesVizsgalat() {
     let eredmeny = new Array()
@@ -216,23 +235,36 @@ function egyezesVizsgalat() {
         else if (szinEgyezes) { eredmeny[i] = "red"; }  // szin egyezést
         else { eredmeny[i] = null; } // nincs egyezést
 
-        console.clear();
+        /* console.clear();
         console.log(eredmeny);
         console.log(megoldasTomb);
-        console.log(jatekosTomb);
+        console.log(jatekosTomb); */
     }
 
-    let cellaMinNegy = document.getElementById(aktivCella.id - 4);
+    let cellaMinNegy = document.getElementById(aktivCella.id - 3);
     cellaMinNegy.style.backgroundColor = eredmeny[0];
-    let cellaMinHarom = document.getElementById(aktivCella.id - 3);
+    let cellaMinHarom = document.getElementById(aktivCella.id - 2);
     cellaMinHarom.style.backgroundColor = eredmeny[1];
-    let cellaMinKetto = document.getElementById(aktivCella.id - 2);
+    let cellaMinKetto = document.getElementById(aktivCella.id - 1);
     cellaMinKetto.style.backgroundColor = eredmeny[2];
-    let cellaMinEgy = document.getElementById(aktivCella.id - 1);
+    let cellaMinEgy = document.getElementById(aktivCella.id);
     cellaMinEgy.style.backgroundColor = eredmeny[3];
     jatekosTomb = [];
+    mindZold()
+    if(eredmeny.every(mindZold) == true) {
+        nyert();
+    } else {
+        ujTablaSor();
+        cellaIdValos += 1;
+        aktivCella = document.getElementById(cellaIdValos);
+        valasztottSzinTomb = [];
+        rejt3.hidden = true;
+    }
 }
 
+function mindZold(eredmeny) {
+    return eredmeny == "green";
+}
 
 
 
@@ -252,15 +284,35 @@ function megoldasMutat() {
     rejt1.hidden = true;
     rejt2.hidden = true;
     rejt3.hidden = true;
-    let vesztettel = document.createElement("h3")
-    vesztettel.innerHTML = "Ezt kellett volna kitalálni";
+    let jatekvege = document.createElement("h3")
+    jatekvege.innerHTML = "Ezt kellett volna kitalálni";
     let ujJatekGomb = document.createElement("button");
     ujJatekGomb.className = "btn btn-primary";
     ujJatekGomb.innerHTML = "Új játék";
     ujJatekGomb.addEventListener("click", function () {
         location.reload();
     });
-    hozzaad.appendChild(vesztettel)
+    hozzaad.appendChild(jatekvege)
+    hozzaad.appendChild(ujJatekGomb)
+    mutatGomb.hidden = true;
+}
+
+function nyert() {
+    megoldasElsoGolyo.hidden = false;
+    megoldasMasodikGolyo.hidden = false;
+    megoldasHarmadikGolyo.hidden = false;
+    megoldasNegyedikGolyo.hidden = false;
+    rejt1.hidden = true;
+    rejt3.hidden = true;
+    let jatekvege = document.createElement("h3")
+    jatekvege.innerHTML = "Gratulálok!";
+    let ujJatekGomb = document.createElement("button");
+    ujJatekGomb.className = "btn btn-primary";
+    ujJatekGomb.innerHTML = "Új játék";
+    ujJatekGomb.addEventListener("click", function () {
+        location.reload();
+    });
+    hozzaad.appendChild(jatekvege)
     hozzaad.appendChild(ujJatekGomb)
     mutatGomb.hidden = true;
 }
