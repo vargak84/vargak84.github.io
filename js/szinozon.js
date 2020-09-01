@@ -177,6 +177,7 @@ function jatekosTombHosszEllenorzes() {
 function golyoCellabaTesz() {
     for (let i = 0; i < valasztottSzinTomb.length; i++) {
         aktivCella.appendChild(valasztottSzinTomb[0]);
+        valasztottSzinTomb[0].setAttribute("onclick", "golyoTorol()");
         /* aktivCellaValtoztat(); */
         /* valasztottSzinTomb = []; */
     }
@@ -189,6 +190,35 @@ function golyoCellabaTesz() {
         aktivCella = document.getElementById(cellaIdValos);
         valasztottSzinTomb = [];
     }
+}
+
+function golyoTorol() {
+        if(jatekosTomb.length <= 3) {
+            cellaIdValos -= 1;
+            aktivCella = document.getElementById(cellaIdValos);
+            aktivCella.innerHTML = "";
+        } else {
+            aktivCella.innerHTML = "";
+            rejt3.hidden = true;
+        }
+        jatekosTomb.pop();
+    }
+
+function removeAttribute() {
+    cellaIdValos -= 4;
+    aktivCella = document.getElementById(cellaIdValos);
+    aktivCella.firstChild.removeAttribute("onclick")
+    cellaIdValos += 1;
+    aktivCella = document.getElementById(cellaIdValos);
+    aktivCella.firstChild.removeAttribute("onclick")
+    cellaIdValos += 1;
+    aktivCella = document.getElementById(cellaIdValos);
+    aktivCella.firstChild.removeAttribute("onclick")
+    cellaIdValos += 1;
+    aktivCella = document.getElementById(cellaIdValos);
+    aktivCella.firstChild.removeAttribute("onclick")
+    cellaIdValos += 1;
+    aktivCella = document.getElementById(cellaIdValos);
 }
 
 /* function aktivCellaValtoztat() {
@@ -251,7 +281,7 @@ function egyezesVizsgalat() {
     cellaMinEgy.style.backgroundColor = eredmeny[3];
     jatekosTomb = [];
     mindZold()
-    if(eredmeny.every(mindZold) == true) {
+    if (eredmeny.every(mindZold) == true) {
         nyert();
     } else {
         ujTablaSor();
@@ -259,6 +289,7 @@ function egyezesVizsgalat() {
         aktivCella = document.getElementById(cellaIdValos);
         valasztottSzinTomb = [];
         rejt3.hidden = true;
+        removeAttribute()
     }
 }
 
