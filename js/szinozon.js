@@ -193,17 +193,17 @@ function golyoCellabaTesz() {
 }
 
 function golyoTorol() {
-        if(jatekosTomb.length <= 3) {
-            cellaIdValos -= 1;
-            aktivCella = document.getElementById(cellaIdValos);
-            aktivCella.innerHTML = "";
-        } else {
-            aktivCella.innerHTML = "";
-            rejt3.hidden = true;
-        }
-        jatekosTomb.pop();
-        console.log(jatekosTomb)
+    if (jatekosTomb.length <= 3) {
+        cellaIdValos -= 1;
+        aktivCella = document.getElementById(cellaIdValos);
+        aktivCella.innerHTML = "";
+    } else {
+        aktivCella.innerHTML = "";
+        rejt3.hidden = true;
     }
+    jatekosTomb.pop();
+    console.log(jatekosTomb)
+}
 
 function removeAttribute() {
     cellaIdValos -= 4;
@@ -245,14 +245,16 @@ function egyezesVizsgalat() {
     let eredmeny = new Array()
 
     for (let i = 0; i < jatekosTomb.length; i++) {
-        let megoldasSzin = megoldasTomb[i];
 
         let teljesEgyezes = false;
         let szinEgyezes = false;
         for (let j = 0; j < megoldasTomb.length; j++) {
 
             // szin egyezés
-            if (megoldasTomb[j].src == jatekosTomb[i].src) {
+            let mgoAzonosSzinulElemekSzama = megoldasTomb.filter(elem => elem.src == megoldasTomb[j].src).length;
+            let jtkAzonosSzinulElemekSzama = jatekosTomb.filter((elem, index) => elem.src == jatekosTomb[i].src && index <= i).length
+            if (megoldasTomb[j].src == jatekosTomb[i].src
+                && jtkAzonosSzinulElemekSzama <= mgoAzonosSzinulElemekSzama) {
                 szinEgyezes = true;
 
                 // szin egyezésen belül még a hely is egyezik
@@ -270,6 +272,7 @@ function egyezesVizsgalat() {
         console.log(eredmeny);
         console.log(megoldasTomb);
         console.log(jatekosTomb); */
+
     }
 
     let cellaMinNegy = document.getElementById(aktivCella.id - 3);
