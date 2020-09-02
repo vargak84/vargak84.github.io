@@ -10,8 +10,38 @@
 </head>
 
 <body>
-    <h1 class="szoveg">Üdözöljük a színözön játékban!</h1>
+    <h1 class="szoveg">Üdözöllek a színözön játékban!</h1>
     <div style="text-align: center; margin: 20px auto;">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModalS">
+            Segítség
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Hogy is működik a játék?</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Az ismert logikai játék webes változata. A Színözön lényege, hogy az elrejtett golyók színét, 
+                        illetve ezek sorrendjét kitaláljuk. Ellenőrzésnél a golyó cellájának háttere 3 színt vehet fel.
+                        Piros esetén a golyó színét, míg zöldnél a színét és helyét is eltaláltuk. Ha nem változik a 
+                        háttérszín, akkor a választott színű golyó nincs bent a megfejtésben. Akkor hajrá!
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <button onclick="debug()" class="btn btn-warning">Debug</button>
     </div>
     <div class="table1">
@@ -43,11 +73,12 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <div class="modal-body">
+                    <div id="felad" class="modal-body">
                         Feladod?
                     </div>
                     <div class="modal-footer">
-                        <button onclick="megoldasMutat()" type="button" class="btn btn-success" data-dismiss="modal">Igen</button>
+                        <button onclick="megoldasMutat()" type="button" class="btn btn-success"
+                            data-dismiss="modal">Igen</button>
                         <button type="button" class="btn btn-danger" data-dismiss="modal">Nem</button>
                     </div>
                 </div>
