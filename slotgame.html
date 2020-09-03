@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slotgame.css">
     <title>Slot game</title>
 </head>
+
 <body>
-    <h2>hamarosan...</h2>
+    <h2>Klasszikus slot game</h2>
+
+    <div>
+        <input id="kep1" class="nav-link disabled form-control digit" type="image" src="img/slotgame/spintowin.png">
+        <input id="kep2" class="nav-link disabled form-control digit" type="image" src="img/slotgame/spintowin.png">
+        <input id="kep3" class="nav-link disabled form-control digit" type="image" src="img/slotgame/spintowin.png">
+    </div>
+
+    <button onclick="porget(), ciklusStop()" class="btn btn-primary">Pörget</button>
+
+    <script src="js/stotgame.js"></script>
+
 </body>
+
 </html>
