@@ -181,7 +181,6 @@ function golyoCellabaTesz() {
         /* aktivCellaValtoztat(); */
         /* valasztottSzinTomb = []; */
     }
-    valasztottSzinTomb = [];
     egeszszamVizsgalo = cellaIdValos / 4;
     if (Number.isInteger(egeszszamVizsgalo) == true) {
         /* ellenorzesGombKeszit() */
@@ -189,6 +188,7 @@ function golyoCellabaTesz() {
     } else {
         cellaIdValos += 1;
         aktivCella = document.getElementById(cellaIdValos);
+        valasztottSzinTomb = [];
     }
 }
 
@@ -252,7 +252,7 @@ function egyezesVizsgalat() {
 
             // szin egyezés
             let mgoAzonosSzinulElemekSzama = megoldasTomb.filter(elem => elem.src == megoldasTomb[j].src).length;
-            let jtkAzonosSzinulElemekSzama = jatekosTomb.filter((elem, index) => elem.src == jatekosTomb[i].src && index <= i).length
+            let jtkAzonosSzinulElemekSzama = jatekosTomb.filter((elem, index) => elem.src == jatekosTomb[i].src && index <= i ).length
             if (megoldasTomb[j].src == jatekosTomb[i].src
                 && jtkAzonosSzinulElemekSzama <= mgoAzonosSzinulElemekSzama) {
                 szinEgyezes = true;
@@ -273,7 +273,7 @@ function egyezesVizsgalat() {
         console.log(megoldasTomb);
         console.log(jatekosTomb); */
 
-    }
+    } 
 
     let cellaMinNegy = document.getElementById(aktivCella.id - 3);
     cellaMinNegy.style.backgroundColor = eredmeny[0];
