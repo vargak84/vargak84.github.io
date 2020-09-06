@@ -3,3 +3,7 @@
     height: 200px;
     display: inline-block;
 }
+
+#porgetGomb {
+    display: block;
+}

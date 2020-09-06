@@ -18,7 +18,17 @@
         <input id="kep3" class="nav-link disabled form-control digit" type="image" src="img/slotgame/spintowin.png">
     </div>
 
-    <button onclick="porget(), ciklusStop()" class="btn btn-primary">Pörget</button>
+    <div>
+        <button id="porgetGomb" onclick="tetVizsgalat()" class="btn btn-primary">Pörget</button>
+    </div>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span id="jatekKeretMezo" class="input-group-text">10000</span>
+            <span class="input-group-text">Ft</span>
+        </div>
+        <input id="tetMezo" type="number" class="form-control" placeholder="Add meg a tétet!">
+    </div>
 
     <script src="js/stotgame.js"></script>
 
