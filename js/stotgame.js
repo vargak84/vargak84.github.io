@@ -126,6 +126,9 @@ function ciklusStop3() {
     setTimeout(function () { clearTimeout(myvar31); }, veletlenIdoTomb[2]);
     setTimeout(function () { clearTimeout(myvar32); }, veletlenIdoTomb[2]);
     setTimeout(function () { porgetGomb.removeAttribute("disabled"); }, veletlenIdoTomb[2]);
+    setTimeout(function () { nyeremenyTomb.push(document.querySelector("#kep1").src); }, veletlenIdoTomb[2]);
+    setTimeout(function () { nyeremenyTomb.push(document.querySelector("#kep2").src); }, veletlenIdoTomb[2]);
+    setTimeout(function () { nyeremenyTomb.push(document.querySelector("#kep3").src); }, veletlenIdoTomb[2]);
 }
 
 let porgetGomb = document.querySelector("#porgetGomb")
@@ -146,19 +149,31 @@ let jatekKeretMezo = document.querySelector("#jatekKeretMezo");
 let tetMezo = document.querySelector("#tetMezo");
 
 function tetVizsgalat() {
-    if (tetMezo.value.length == 0) {
-        alert("Csak számot írhatsz be a téthez!")
-    } else if (Number.isInteger(tetMezo.valueAsNumber) == false) {
-        alert("Csak egész szám lehet a tét!")
+    let tetMezoErtek = Number.isInteger(tetMezo.valueAsNumber);
+    if (tetMezoErtek == false || tetMezoErtek < 0) {
+        alert("Csak pozitív egész számot adhatsz meg tétnek!")
     } else if (jatekKeretMezo.innerHTML - tetMezo.value < 0) {
         alert("Túl nagy a megadott tét!")
     } else {
         foFuggveny();
-        jatekKeretetValtoztat();
+        jatekKeretetValtoztat()
     }
 }
 
 function jatekKeretetValtoztat() {
     let jatekKeret = jatekKeretMezo.innerHTML - tetMezo.value;
-        jatekKeretMezo.innerHTML = jatekKeret;
+    jatekKeretMezo.innerHTML = jatekKeret;
 }
+
+/* let nyeremenyTomb = [];
+
+function nyeremenyVizsgalat() {
+    let seven = 0;
+    for (let i = 0; i < nyeremenyTomb.length; i++) {
+        if(nyeremenyTomb[i].indexOf("7.png") > 0) {
+            seven += 1;
+            console.log(seven)
+        }
+    }
+
+} */
