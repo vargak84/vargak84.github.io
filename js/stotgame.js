@@ -129,11 +129,13 @@ function ciklusStop3() {
     setTimeout(function () { nyeremenyTomb.push(document.querySelector("#kep1").src); }, veletlenIdoTomb[2]);
     setTimeout(function () { nyeremenyTomb.push(document.querySelector("#kep2").src); }, veletlenIdoTomb[2]);
     setTimeout(function () { nyeremenyTomb.push(document.querySelector("#kep3").src); }, veletlenIdoTomb[2]);
+    setTimeout(function () { nyeremenyVizsgalat(); }, veletlenIdoTomb[2]);
 }
 
 let porgetGomb = document.querySelector("#porgetGomb")
 
 function foFuggveny() {
+    nyeremenyUzenet.hidden = true;
     veletlenIdo()
     kepTombeTeszIdoFuggveny1()
     kepTombeTeszIdoFuggveny2()
@@ -165,15 +167,85 @@ function jatekKeretetValtoztat() {
     jatekKeretMezo.innerHTML = jatekKeret;
 }
 
-/* let nyeremenyTomb = [];
+let nyeremenyTomb = [];
+let cseri = 0;
+let citrom = 0;
+let dinnye = 0;
+let bar = 0;
+let seven = 0;
 
 function nyeremenyVizsgalat() {
-    let seven = 0;
+
     for (let i = 0; i < nyeremenyTomb.length; i++) {
-        if(nyeremenyTomb[i].indexOf("7.png") > 0) {
+        if (nyeremenyTomb[i].indexOf("cseri.png") > 0) {
+            cseri += 1;
+        }
+        if (nyeremenyTomb[i].indexOf("citrom.png") > 0) {
+            citrom += 1;
+        }
+        if (nyeremenyTomb[i].indexOf("dinnye.png") > 0) {
+            dinnye += 1;
+        }
+        if (nyeremenyTomb[i].indexOf("bar.png") > 0) {
+            bar += 1;
+        }
+        if (nyeremenyTomb[i].indexOf("7.png") > 0) {
             seven += 1;
-            console.log(seven)
         }
     }
+    szorzoVizsgalat()
+    nyeremenyTomb = [];
+}
 
-} */
+let nyeremenyUzenet = document.querySelector("#nyeremenyUzenet");
+let onNyert = document.querySelector("#onNyert");
+
+function szorzoVizsgalat() {
+    let tetMezoErtek = parseInt(tetMezo.value);
+    let nyeremeny = 0;
+    if (cseri == 2) {
+        nyeremeny = tetMezoErtek;
+    }
+    if (cseri == 3) {
+        nyeremeny = tetMezoErtek * 2;
+    }
+    if (citrom == 2) {
+        nyeremeny = tetMezoErtek;
+    }
+    if (citrom == 3) {
+        nyeremeny = tetMezoErtek * 2;
+    }
+    if (dinnye == 2) {
+        nyeremeny = tetMezoErtek;
+    }
+    if (dinnye == 3) {
+        nyeremeny = tetMezoErtek * 2;
+    }
+    if (bar == 2) {
+        nyeremeny = tetMezoErtek * 5;
+    }
+    if (bar == 3) {
+        nyeremeny = tetMezoErtek * 15;
+    }
+    if (seven == 2) {
+        nyeremeny = tetMezoErtek * 10;
+    }
+    if (seven == 3) {
+        nyeremeny = tetMezoErtek * 100;
+    }
+
+    let jatekKeretErtek = parseInt(jatekKeretMezo.innerHTML);
+    let ujJatekKeret = jatekKeretErtek + nyeremeny;
+    jatekKeretMezo.innerHTML = ujJatekKeret;
+    onNyert.innerHTML = nyeremeny;
+    nyeremenyUzenet.hidden = false;
+
+
+    cseri = 0;
+    citrom = 0;
+    dinnye = 0;
+    bar = 0;
+    seven = 0;
+
+
+}
