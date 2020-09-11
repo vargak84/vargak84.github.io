@@ -1,3 +1,31 @@
+body {
+    background-color: lightcyan;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.foOldalGomb {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.kepInput {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.infoInput {
+    width: 60%;
+    margin: auto;
+}
+
+.kepInputMezo {
+    border-radius: 30px;
+}
+
 .nav-link {
     width: 200px;
     height: 200px;

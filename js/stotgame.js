@@ -194,6 +194,7 @@ function nyeremenyVizsgalat() {
         }
     }
     szorzoVizsgalat()
+    jatekKeretNull()
     nyeremenyTomb = [];
 }
 
@@ -240,12 +241,15 @@ function szorzoVizsgalat() {
     onNyert.innerHTML = nyeremeny;
     nyeremenyUzenet.hidden = false;
 
-
     cseri = 0;
     citrom = 0;
     dinnye = 0;
     bar = 0;
     seven = 0;
+}
 
-
+function jatekKeretNull() {
+    if(parseInt(jatekKeretMezo.innerHTML) == 0) {
+        $("#exampleModalCenter2").modal()
+    }
 }

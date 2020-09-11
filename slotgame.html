@@ -13,10 +13,12 @@
 
     <h2>Klasszikus slot game</h2>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-        Nyereményszorzó
-    </button>
+    <div class="foOldalGomb">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+            Nyereményszorzó
+        </button>
+    </div>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
@@ -39,17 +41,35 @@
         </div>
     </div>
 
-    <div>
-        <input id="kep1" class="nav-link disabled form-control digit" type="image" src="img/slotgame/spintowin.png">
-        <input id="kep2" class="nav-link disabled form-control digit" type="image" src="img/slotgame/spintowin.png">
-        <input id="kep3" class="nav-link disabled form-control digit" type="image" src="img/slotgame/spintowin.png">
+    <!-- Egyenlet Nulla Modal -->
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">A további játékhoz töltse fel egyenlegét!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Feltöltés 10000 Ft-tal. <button onclick="location.reload();" type="button" class="btn btn-success" data-dismiss="modal">Ok</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="kepInput">
+        <input id="kep1" class="nav-link disabled form-control digit kepInputMezo" type="image" src="img/slotgame/spintowin.png">
+        <input id="kep2" class="nav-link disabled form-control digit kepInputMezo" type="image" src="img/slotgame/spintowin.png">
+        <input id="kep3" class="nav-link disabled form-control digit kepInputMezo" type="image" src="img/slotgame/spintowin.png">
     </div>
 
     <div>
-        <button id="porgetGomb" onclick="tetVizsgalat()" class="btn btn-primary">Pörget</button>
+        <button id="porgetGomb" onclick="tetVizsgalat()" class="btn btn-primary foOldalGomb">Pörget</button>
     </div>
 
-    <div class="input-group mb-3">
+    <div class="input-group mb-3 infoInput">
         <div class="input-group-prepend">
             <span id="jatekKeretMezo" class="input-group-text">10000</span>
             <span class="input-group-text">Ft</span>
@@ -57,7 +77,7 @@
         <input id="tetMezo" type="number" class="form-control" placeholder="Add meg a tétet!">
     </div>
 
-    <div id="nyeremenyUzenet" class="alert alert-success" role="alert" hidden>
+    <div id="nyeremenyUzenet" class="alert alert-success infoInput" role="alert" hidden>
         Ön nyert <small id="onNyert">0</small> Ft-ot!
     </div>
 
