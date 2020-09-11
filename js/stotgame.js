@@ -1,3 +1,10 @@
+let widthModosit = document.querySelector("#penzKeretDiv");
+let nyeremenyUzenet = document.querySelector("#nyeremenyUzenet");
+if(window.innerWidth < 400) {
+    widthModosit.style.width = "85%";
+    nyeremenyUzenet.style.width = "85%";
+}
+
 let veletlenIdoTomb = [];
 
 //Véletlenidő generátor
@@ -198,7 +205,6 @@ function nyeremenyVizsgalat() {
     nyeremenyTomb = [];
 }
 
-let nyeremenyUzenet = document.querySelector("#nyeremenyUzenet");
 let onNyert = document.querySelector("#onNyert");
 
 function szorzoVizsgalat() {
