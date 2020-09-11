@@ -1,0 +1,13 @@
+body {
+    background-color: lemonchiffon;
+}
+
+img {
+    size: 100px;
+}
+
+.kepInputMezo {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+}
