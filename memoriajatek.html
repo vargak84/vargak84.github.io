@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/memoriajatek.css">
-    <title>Document</title>
+    <title>Memória játék</title>
 </head>
 
 <body>
@@ -19,11 +19,12 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Gratulálok! Ügyes voltál!</h5>
-                    
+                    <h5 class="modal-title" id="exampleModalLongTitle">Gratulálok!</h5>
+
                 </div>
                 <div class="modal-body">
                     <img id="firework" src="img/memoriajatek/firework.gif" alt="firework">
+                    <small id="modalSmall"></small>
                 </div>
                 <div class="modal-footer">
                     <button type="button" onclick="ujJatek()" class="btn btn-primary">Új játék</button>
@@ -33,63 +34,120 @@
         </div>
     </div>
 
-    <div>
+    <!-- Button trigger modal -->
+    <div id="jatekrolGombDiv">
+        <button type="button" id="jatekrolGomb" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
+            A játékról
+        </button>
+    </div>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">A játékról</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        A játék lényege, hogy minél kevesebb "mellékattintással" megtaláld a párokat.
+                        Új játék kezdésénél 5 másodperced van a memorizálásra.
+                        A játék előrehaladtával változik a háttérszín, ami jelzi, hogy egyre több hibát ejtesz.
+                    </p>
+                    <h4>Memória szintek</h4>
+                    <p>
+                        Profi 15 alatt <br> háttérszín <input type="text" style="background-color: cornsilk;">
+                    </p>
+                    <p>
+                        Haladó 15 és 23 között <br> háttérszín <input type="text" style="background-color: rgb(219, 178, 11);">
+                    </p>
+                    <p>
+                        Közepes 23 és 30 között <br> háttérszín <input type="text" style="background-color: rgb(134, 109, 7);">
+                    </p>
+                    <p>
+                        Lehetne jobb is! 30 felett <br> háttérszín <input type="text" style="background-color: rgb(78, 63, 4);">
+                    </p>
+                    <h4>Gyakorlat teszi a mestert!</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Bezár</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="inputs">
         <input class="nav-link form-control kepInputMezo" id="kep1" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep2" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep3" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep4" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
     </div>
 
-    <div>
+    <div class="inputs">
         <input class="nav-link form-control kepInputMezo" id="kep5" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep6" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep7" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep8" type="image" alt="" onclick="reply_click(this)"
-            disabled>
-    </div>
+            disabled style="width: 100px; height: 100px;">
+    </div class="inputs">
 
-    <div>
+    <div class="inputs">
         <input class="nav-link form-control kepInputMezo" id="kep9" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep10" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep11" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep12" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
     </div>
 
-    <div>
+    <div class="inputs">
         <input class="nav-link form-control kepInputMezo" id="kep13" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep14" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep15" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep16" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
     </div>
 
-    <div>
+    <div class="inputs">
         <input class="nav-link form-control kepInputMezo" id="kep17" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep18" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep19" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
         <input class="nav-link form-control kepInputMezo" id="kep20" type="image" alt="" onclick="reply_click(this)"
-            disabled>
+            disabled style="width: 100px; height: 100px;">
     </div>
-    <div id="startGomb">
 
-        <button onclick="jatekStart()">Indít</button>
+    <div id="startGombDiv">
+        <button id="startGomb" class="btn btn-primary" onclick="jatekStart()">Indít</button>
+    </div>
+
+    <div class="probDiv" hidden>
+        <div class="probDiv1">
+            <input type="text" style="width: 135px; color: black; text-align: center;" placeholder="Próbák száma:"
+                disabled>
+        </div>
+        <div class="probDiv1">
+            <input id="probSzam" type="text" style="width: 40px; text-align: center;" placeholder="" value="0"
+                aria-label="Username" aria-describedby="basic-addon1" disabled>
+        </div>
     </div>
 
     <script src="js/memoriajatek.js"></script>

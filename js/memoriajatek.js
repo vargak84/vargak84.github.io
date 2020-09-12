@@ -18,6 +18,8 @@ let kepekTomb = [
     "/img/memoriajatek/freddy2.png",
     "/img/memoriajatek/jerry1.png",
     "/img/memoriajatek/jerry2.png",
+    "/img/memoriajatek/mrsbeakley1.png",
+    "/img/memoriajatek/mrsbeakley2.png",
     "/img/memoriajatek/nemo1.png",
     "/img/memoriajatek/nemo2.png",
     "/img/memoriajatek/scooby1.png",
@@ -26,8 +28,6 @@ let kepekTomb = [
     "/img/memoriajatek/senilla2.png",
     "/img/memoriajatek/shaggy1.png",
     "/img/memoriajatek/shaggy2.png",
-    "/img/memoriajatek/shrek1.png",
-    "/img/memoriajatek/shrek2.png",
     "/img/memoriajatek/tom1.png",
     "/img/memoriajatek/tom2.png"
 ];
@@ -52,6 +52,49 @@ let kep17 = document.querySelector("#kep17")
 let kep18 = document.querySelector("#kep18")
 let kep19 = document.querySelector("#kep19")
 let kep20 = document.querySelector("#kep20")
+
+if (window.innerWidth < 400) {
+    kep1.style.height = "70px";
+    kep1.style.width = "70px";
+    kep2.style.height = "70px";
+    kep2.style.width = "70px";
+    kep3.style.height = "70px";
+    kep3.style.width = "70px";
+    kep4.style.height = "70px";
+    kep4.style.width = "70px";
+    kep5.style.height = "70px";
+    kep5.style.width = "70px";
+    kep6.style.height = "70px";
+    kep6.style.width = "70px";
+    kep7.style.height = "70px";
+    kep7.style.width = "70px";
+    kep8.style.height = "70px";
+    kep8.style.width = "70px";
+    kep9.style.height = "70px";
+    kep9.style.width = "70px";
+    kep10.style.height = "70px";
+    kep10.style.width = "70px";
+    kep11.style.height = "70px";
+    kep11.style.width = "70px";
+    kep12.style.height = "70px";
+    kep12.style.width = "70px";
+    kep13.style.height = "70px";
+    kep13.style.width = "70px";
+    kep14.style.height = "70px";
+    kep14.style.width = "70px";
+    kep15.style.height = "70px";
+    kep15.style.width = "70px";
+    kep16.style.height = "70px";
+    kep16.style.width = "70px";
+    kep17.style.height = "70px";
+    kep17.style.width = "70px";
+    kep18.style.height = "70px";
+    kep18.style.width = "70px";
+    kep19.style.height = "70px";
+    kep19.style.width = "70px";
+    kep20.style.height = "70px";
+    kep20.style.width = "70px";
+}
 
 function kepInputbaTesz() {
     kep1.src = kepekTomb[0];
@@ -123,9 +166,12 @@ function kepEltuntetIdozito() {
     myvar = setTimeout(function () { kepEltuntet(); }, 5000);
 }
 
+let probDiv = document.querySelector(".probDiv")
+
 function jatekStart() {
-    let startGomb = document.querySelector("#startGomb");
+    let startGomb = document.querySelector("#startGombDiv");
     startGomb.hidden = true;
+    probDiv.hidden = false;
     randomArrayShuffle(kepekTomb);
     kepInputbaTesz();
     kepEltuntetIdozito();
@@ -168,8 +214,14 @@ function inputFelold() {
     }
 }
 
+let szamlalo = 0;
+let probSzam = document.querySelector("#probSzam");
+
 function valasztottInputCiklus() {
     if (valasztottInput.length == 2) {
+        szamlalo += 1;
+        probSzam.value = szamlalo;
+        hatterSzinValtoztat();
         inputZar();
         egyezesVizsgalat();
     }
@@ -194,30 +246,45 @@ function MutatRossz() {
 }
 
 function egyezesVizsgalat() {
-    for (let i = 0; i < valasztottInput.length; i++) {
-        if (valasztottInput[0].src.indexOf("beni1") >= 0 && valasztottInput[1].src.indexOf("beni2") >= 0 || valasztottInput[1].src.indexOf("beni1") >= 0 && valasztottInput[0].src.indexOf("beni2") >= 0) {
-            MutatJo();
-        } else if (valasztottInput[0].src.indexOf("dagobert1") >= 0 && valasztottInput[1].src.indexOf("dagobert2") >= 0 || valasztottInput[1].src.indexOf("dagobert1") >= 0 && valasztottInput[0].src.indexOf("dagobert2") >= 0) {
-            MutatJo();
-        } else if (valasztottInput[0].src.indexOf("freddy1") >= 0 && valasztottInput[1].src.indexOf("freddy2") >= 0 || valasztottInput[1].src.indexOf("freddy1") >= 0 && valasztottInput[0].src.indexOf("freddy2") >= 0) {
-            MutatJo();
-        } else if (valasztottInput[0].src.indexOf("jerry1") >= 0 && valasztottInput[1].src.indexOf("jerry2") >= 0 || valasztottInput[1].src.indexOf("jerry1") >= 0 && valasztottInput[0].src.indexOf("jerry2") >= 0) {
-            MutatJo();
-        } else if (valasztottInput[0].src.indexOf("nemo1") >= 0 && valasztottInput[1].src.indexOf("nemo2") >= 0 || valasztottInput[1].src.indexOf("nemo1") >= 0 && valasztottInput[0].src.indexOf("nemo2") >= 0) {
-            MutatJo();
-        } else if (valasztottInput[0].src.indexOf("scooby1") >= 0 && valasztottInput[1].src.indexOf("scooby2") >= 0 || valasztottInput[1].src.indexOf("scooby1") >= 0 && valasztottInput[0].src.indexOf("scooby2") >= 0) {
-            MutatJo();
-        } else if (valasztottInput[0].src.indexOf("senilla1") >= 0 && valasztottInput[1].src.indexOf("senilla2") >= 0 || valasztottInput[1].src.indexOf("senilla1") >= 0 && valasztottInput[0].src.indexOf("senilla2") >= 0) {
-            MutatJo();
-        } else if (valasztottInput[0].src.indexOf("shaggy1") >= 0 && valasztottInput[1].src.indexOf("shaggy2") >= 0 || valasztottInput[1].src.indexOf("shaggy1") >= 0 && valasztottInput[0].src.indexOf("shaggy2") >= 0) {
-            MutatJo();
-        } else if (valasztottInput[0].src.indexOf("shrek1") >= 0 && valasztottInput[1].src.indexOf("shrek2") >= 0 || valasztottInput[1].src.indexOf("shrek1") >= 0 && valasztottInput[0].src.indexOf("shrek2") >= 0) {
-            MutatJo();
-        } else if (valasztottInput[0].src.indexOf("tom1") >= 0 && valasztottInput[1].src.indexOf("tom2") >= 0 || valasztottInput[1].src.indexOf("tom1") >= 0 && valasztottInput[0].src.indexOf("tom2") >= 0) {
-            MutatJo();
-        } else {
-            MutatRossz();
-        }
+    if (valasztottInput[0].src.indexOf("beni1") >= 0 && valasztottInput[1].src.indexOf("beni2") >= 0 || valasztottInput[1].src.indexOf("beni1") >= 0 && valasztottInput[0].src.indexOf("beni2") >= 0) {
+        MutatJo();
+    } else if (valasztottInput[0].src.indexOf("dagobert1") >= 0 && valasztottInput[1].src.indexOf("dagobert2") >= 0 || valasztottInput[1].src.indexOf("dagobert1") >= 0 && valasztottInput[0].src.indexOf("dagobert2") >= 0) {
+        MutatJo();
+    } else if (valasztottInput[0].src.indexOf("freddy1") >= 0 && valasztottInput[1].src.indexOf("freddy2") >= 0 || valasztottInput[1].src.indexOf("freddy1") >= 0 && valasztottInput[0].src.indexOf("freddy2") >= 0) {
+        MutatJo();
+    } else if (valasztottInput[0].src.indexOf("jerry1") >= 0 && valasztottInput[1].src.indexOf("jerry2") >= 0 || valasztottInput[1].src.indexOf("jerry1") >= 0 && valasztottInput[0].src.indexOf("jerry2") >= 0) {
+        MutatJo();
+    } else if (valasztottInput[0].src.indexOf("nemo1") >= 0 && valasztottInput[1].src.indexOf("nemo2") >= 0 || valasztottInput[1].src.indexOf("nemo1") >= 0 && valasztottInput[0].src.indexOf("nemo2") >= 0) {
+        MutatJo();
+    } else if (valasztottInput[0].src.indexOf("scooby1") >= 0 && valasztottInput[1].src.indexOf("scooby2") >= 0 || valasztottInput[1].src.indexOf("scooby1") >= 0 && valasztottInput[0].src.indexOf("scooby2") >= 0) {
+        MutatJo();
+    } else if (valasztottInput[0].src.indexOf("senilla1") >= 0 && valasztottInput[1].src.indexOf("senilla2") >= 0 || valasztottInput[1].src.indexOf("senilla1") >= 0 && valasztottInput[0].src.indexOf("senilla2") >= 0) {
+        MutatJo();
+    } else if (valasztottInput[0].src.indexOf("shaggy1") >= 0 && valasztottInput[1].src.indexOf("shaggy2") >= 0 || valasztottInput[1].src.indexOf("shaggy1") >= 0 && valasztottInput[0].src.indexOf("shaggy2") >= 0) {
+        MutatJo();
+    } else if (valasztottInput[0].src.indexOf("mrsbeakley1") >= 0 && valasztottInput[1].src.indexOf("mrsbeakley2") >= 0 || valasztottInput[1].src.indexOf("mrsbeakley1") >= 0 && valasztottInput[0].src.indexOf("mrsbeakley2") >= 0) {
+        MutatJo();
+    } else if (valasztottInput[0].src.indexOf("tom1") >= 0 && valasztottInput[1].src.indexOf("tom2") >= 0 || valasztottInput[1].src.indexOf("tom1") >= 0 && valasztottInput[0].src.indexOf("tom2") >= 0) {
+        MutatJo();
+    } else {
+        MutatRossz();
+    }
+}
+
+let vegjatekSmall = document.querySelector("#modalSmall");
+
+function hatterSzinValtoztat() {
+    if (szamlalo == 15) {
+        document.body.style.backgroundColor = "rgb(219, 178, 11)";
+        vegjatekSmall.innerHTML = "Profi vagy!";
+    }
+    if (szamlalo == 23) {
+        document.body.style.backgroundColor = "rgb(134, 109, 7)";
+        vegjatekSmall.innerHTML = "Ügyes voltál! Gyakorolj még egy kicsit, hogy kevesebb menjen mellé.";
+    }
+    if (szamlalo == 30) {
+        document.body.style.backgroundColor = "rgb(78, 63, 4)";
+        vegjatekSmall.innerHTML = "Nem volt rossz! Gyakorlás teszi a mestert.";
     }
 }
 
