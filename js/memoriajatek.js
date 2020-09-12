@@ -132,6 +132,44 @@ function jatekStart() {
     kepEltuntetIdozito();
 }
 
+let valasztottInputSrc = [];
+let valasztottInput = [];
+
 function reply_click(clicked) {
     clicked.src = kepekTomb[clicked.id.match(/\d+/) - 1];
+    valasztottInputSrc.push(clicked.src)
+    valasztottInput.push(clicked)
+    valasztottInputCiklus();
+}
+
+function valasztottInputCiklus() {
+        if (valasztottInput.length == 2) {
+            console.log(valasztottInputSrc);
+            console.log(valasztottInput);
+            /* egyezesVizsgalat(); */
+        }
+}
+
+function MutatJo() {
+    valasztottInput[0].disabled = true;
+    valasztottInput[1].disabled = true
+    valasztottInputSrc = [];
+    valasztottInput = [];
+}
+
+function MutatRossz() {
+    myvar1 = setTimeout(function () { valasztottInput[0].src = ""; }, 2000);
+    myvar2 = setTimeout(function () { valasztottInput[1].src = ""; }, 2000);
+    myvar3 = setTimeout(function () { valasztottInput = []; }, 2100);
+    myvar4 = setTimeout(function () { valasztottInputSrc = []; }, 2100);
+}
+
+function egyezesVizsgalat() {
+    for(let i = 0; i <= valasztottInput.length; i++) {
+        if(valasztottInput[i].src.indexOf("beni1") >= 0 && valasztottInput[i].src.indexOf("beni2") >= 0) {
+            console.log("j");
+        } else {
+            console.log("n");
+        }
+    }
 }
