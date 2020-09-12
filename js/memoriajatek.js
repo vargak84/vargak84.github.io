@@ -123,7 +123,6 @@ function kepEltuntetIdozito() {
     myvar = setTimeout(function () { kepEltuntet(); }, 5000);
 }
 
-
 function jatekStart() {
     let startGomb = document.querySelector("#startGomb");
     startGomb.hidden = true;
@@ -135,6 +134,10 @@ function jatekStart() {
 let valasztottInputSrc = [];
 let valasztottInput = [];
 
+let tombId = [kep1, kep2, kep3, kep4, kep5, kep6, kep7, kep8, kep9, kep10,
+    kep11, kep12, kep13, kep14, kep15, kep16, kep17, kep18, kep19, kep20
+]
+
 function reply_click(clicked) {
     clicked.src = kepekTomb[clicked.id.match(/\d+/) - 1];
     valasztottInputSrc.push(clicked.src)
@@ -142,19 +145,44 @@ function reply_click(clicked) {
     valasztottInputCiklus();
 }
 
+function tombIdTorol(item) {
+    let x = valasztottInput[0];
+    let y = valasztottInput[1];
+    tombId = tombId.filter(function (item) {
+        return item !== x;
+    })
+    tombId = tombId.filter(function (item) {
+        return item !== y;
+    })
+}
+
+function inputZar() {
+    for (let i = 0; i < tombId.length; i++) {
+        tombId[i].disabled = true;
+    }
+}
+
+function inputFelold() {
+    for (let i = 0; i < tombId.length; i++) {
+        tombId[i].disabled = false;
+    }
+}
+
 function valasztottInputCiklus() {
-        if (valasztottInput.length == 2) {
-            console.log(valasztottInputSrc);
-            console.log(valasztottInput);
-            /* egyezesVizsgalat(); */
-        }
+    if (valasztottInput.length == 2) {
+        inputZar();
+        egyezesVizsgalat();
+    }
 }
 
 function MutatJo() {
+    tombIdTorol();
     valasztottInput[0].disabled = true;
     valasztottInput[1].disabled = true
     valasztottInputSrc = [];
     valasztottInput = [];
+    inputFelold();
+    vegJatek();
 }
 
 function MutatRossz() {
@@ -162,14 +190,43 @@ function MutatRossz() {
     myvar2 = setTimeout(function () { valasztottInput[1].src = ""; }, 2000);
     myvar3 = setTimeout(function () { valasztottInput = []; }, 2100);
     myvar4 = setTimeout(function () { valasztottInputSrc = []; }, 2100);
+    myvar5 = setTimeout(function () { inputFelold(); }, 2100);
 }
 
 function egyezesVizsgalat() {
-    for(let i = 0; i <= valasztottInput.length; i++) {
-        if(valasztottInput[i].src.indexOf("beni1") >= 0 && valasztottInput[i].src.indexOf("beni2") >= 0) {
-            console.log("j");
+    for (let i = 0; i < valasztottInput.length; i++) {
+        if (valasztottInput[0].src.indexOf("beni1") >= 0 && valasztottInput[1].src.indexOf("beni2") >= 0 || valasztottInput[1].src.indexOf("beni1") >= 0 && valasztottInput[0].src.indexOf("beni2") >= 0) {
+            MutatJo();
+        } else if (valasztottInput[0].src.indexOf("dagobert1") >= 0 && valasztottInput[1].src.indexOf("dagobert2") >= 0 || valasztottInput[1].src.indexOf("dagobert1") >= 0 && valasztottInput[0].src.indexOf("dagobert2") >= 0) {
+            MutatJo();
+        } else if (valasztottInput[0].src.indexOf("freddy1") >= 0 && valasztottInput[1].src.indexOf("freddy2") >= 0 || valasztottInput[1].src.indexOf("freddy1") >= 0 && valasztottInput[0].src.indexOf("freddy2") >= 0) {
+            MutatJo();
+        } else if (valasztottInput[0].src.indexOf("jerry1") >= 0 && valasztottInput[1].src.indexOf("jerry2") >= 0 || valasztottInput[1].src.indexOf("jerry1") >= 0 && valasztottInput[0].src.indexOf("jerry2") >= 0) {
+            MutatJo();
+        } else if (valasztottInput[0].src.indexOf("nemo1") >= 0 && valasztottInput[1].src.indexOf("nemo2") >= 0 || valasztottInput[1].src.indexOf("nemo1") >= 0 && valasztottInput[0].src.indexOf("nemo2") >= 0) {
+            MutatJo();
+        } else if (valasztottInput[0].src.indexOf("scooby1") >= 0 && valasztottInput[1].src.indexOf("scooby2") >= 0 || valasztottInput[1].src.indexOf("scooby1") >= 0 && valasztottInput[0].src.indexOf("scooby2") >= 0) {
+            MutatJo();
+        } else if (valasztottInput[0].src.indexOf("senilla1") >= 0 && valasztottInput[1].src.indexOf("senilla2") >= 0 || valasztottInput[1].src.indexOf("senilla1") >= 0 && valasztottInput[0].src.indexOf("senilla2") >= 0) {
+            MutatJo();
+        } else if (valasztottInput[0].src.indexOf("shaggy1") >= 0 && valasztottInput[1].src.indexOf("shaggy2") >= 0 || valasztottInput[1].src.indexOf("shaggy1") >= 0 && valasztottInput[0].src.indexOf("shaggy2") >= 0) {
+            MutatJo();
+        } else if (valasztottInput[0].src.indexOf("shrek1") >= 0 && valasztottInput[1].src.indexOf("shrek2") >= 0 || valasztottInput[1].src.indexOf("shrek1") >= 0 && valasztottInput[0].src.indexOf("shrek2") >= 0) {
+            MutatJo();
+        } else if (valasztottInput[0].src.indexOf("tom1") >= 0 && valasztottInput[1].src.indexOf("tom2") >= 0 || valasztottInput[1].src.indexOf("tom1") >= 0 && valasztottInput[0].src.indexOf("tom2") >= 0) {
+            MutatJo();
         } else {
-            console.log("n");
+            MutatRossz();
         }
     }
+}
+
+function vegJatek() {
+    if (tombId.length == 0) {
+        $("#exampleModalCenter").modal();
+    }
+}
+
+function ujJatek() {
+    location.reload();
 }

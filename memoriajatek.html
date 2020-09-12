@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,51 +8,94 @@
     <link rel="stylesheet" href="css/memoriajatek.css">
     <title>Document</title>
 </head>
+
 <body>
 
     <h1>Memória játék</h1>
-    
-<div>
-    <input class="nav-link form-control kepInputMezo" id="kep1" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep2" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep3" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep4" type="image" alt="" onclick="reply_click(this)" disabled>
-</div>
 
-<div>
-    <input class="nav-link form-control kepInputMezo" id="kep5" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep6" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep7" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep8" type="image" alt="" onclick="reply_click(this)" disabled>
-</div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Gratulálok! Ügyes voltál!</h5>
+                    
+                </div>
+                <div class="modal-body">
+                    <img id="firework" src="img/memoriajatek/firework.gif" alt="firework">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="ujJatek()" class="btn btn-primary">Új játék</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Bezár</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<div>
-    <input class="nav-link form-control kepInputMezo" id="kep9" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep10" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep11" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep12" type="image" alt="" onclick="reply_click(this)" disabled>
-</div>
+    <div>
+        <input class="nav-link form-control kepInputMezo" id="kep1" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep2" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep3" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep4" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+    </div>
 
-<div>
-    <input class="nav-link form-control kepInputMezo" id="kep13" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep14" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep15" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep16" type="image" alt="" onclick="reply_click(this)" disabled>
-</div>
+    <div>
+        <input class="nav-link form-control kepInputMezo" id="kep5" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep6" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep7" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep8" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+    </div>
 
-<div>
-    <input class="nav-link form-control kepInputMezo" id="kep17" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep18" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep19" type="image" alt="" onclick="reply_click(this)" disabled>
-    <input class="nav-link form-control kepInputMezo" id="kep20" type="image" alt="" onclick="reply_click(this)" disabled>
-</div>
-<div id="startGomb">
+    <div>
+        <input class="nav-link form-control kepInputMezo" id="kep9" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep10" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep11" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep12" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+    </div>
 
-    <button onclick="jatekStart()">Indít</button>
-</div>
+    <div>
+        <input class="nav-link form-control kepInputMezo" id="kep13" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep14" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep15" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep16" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+    </div>
 
+    <div>
+        <input class="nav-link form-control kepInputMezo" id="kep17" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep18" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep19" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+        <input class="nav-link form-control kepInputMezo" id="kep20" type="image" alt="" onclick="reply_click(this)"
+            disabled>
+    </div>
+    <div id="startGomb">
 
+        <button onclick="jatekStart()">Indít</button>
+    </div>
 
     <script src="js/memoriajatek.js"></script>
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
 </body>
+
 </html>
