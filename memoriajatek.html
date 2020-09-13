@@ -24,7 +24,12 @@
                 </div>
                 <div class="modal-body">
                     <img id="firework" src="img/memoriajatek/firework.gif" alt="firework">
-                    <small id="modalSmall"></small>
+                    <p>
+                        <small id="modalSmall"></small>
+                    </p>
+                    <p id="probSzamP">
+                        <small id="probSzamModal"></small> próbálkozásból találtál meg minden párt.
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" onclick="ujJatek()" class="btn btn-primary">Új játék</button>
@@ -36,11 +41,12 @@
 
     <!-- Button trigger modal -->
     <div id="jatekrolGombDiv">
-        <button type="button" id="jatekrolGomb" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
+        <button type="button" id="jatekrolGomb" class="btn btn-primary" data-toggle="modal"
+            data-target="#exampleModalCenter2">
             A játékról
         </button>
     </div>
-    
+
     <!-- Modal -->
     <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -60,16 +66,24 @@
                     </p>
                     <h4>Memória szintek</h4>
                     <p>
-                        Profi 15 alatt <br> háttérszín <input type="text" style="background-color: cornsilk;">
+                        <input type="text"
+                            style="background-color: cornsilk; color: black; width: 50%; border-radius: 5px;"
+                            placeholder="Profi 15 próba alatt" disabled>
                     </p>
                     <p>
-                        Haladó 15 és 23 között <br> háttérszín <input type="text" style="background-color: rgb(219, 178, 11);">
+                        <input type="text"
+                            style="background-color: rgb(219, 178, 11); color: black; width: 50%; border-radius: 5px;"
+                            placeholder="Haladó 15 és 23 próba között" disabled>
                     </p>
                     <p>
-                        Közepes 23 és 30 között <br> háttérszín <input type="text" style="background-color: rgb(134, 109, 7);">
+                        <input type="text"
+                            style="background-color: rgb(134, 109, 7); color: darkgrey; width: 50%; border-radius: 5px;"
+                            placeholder="Közepes 23 és 30 próba között" disabled>
                     </p>
                     <p>
-                        Lehetne jobb is! 30 felett <br> háttérszín <input type="text" style="background-color: rgb(78, 63, 4);">
+                        <input type="text"
+                            style="background-color: rgb(78, 63, 4); color: white; width: 50%; border-radius: 5px;"
+                            placeholder="Lehetne jobb is! 30 próba felett" disabled>
                     </p>
                     <h4>Gyakorlat teszi a mestert!</h4>
                 </div>

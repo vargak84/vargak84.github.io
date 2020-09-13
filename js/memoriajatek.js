@@ -274,23 +274,30 @@ function egyezesVizsgalat() {
 let vegjatekSmall = document.querySelector("#modalSmall");
 
 function hatterSzinValtoztat() {
-    if (szamlalo == 15) {
-        document.body.style.backgroundColor = "rgb(219, 178, 11)";
+    if (szamlalo <= 15) {
         vegjatekSmall.innerHTML = "Profi vagy!";
     }
-    if (szamlalo == 23) {
-        document.body.style.backgroundColor = "rgb(134, 109, 7)";
-        vegjatekSmall.innerHTML = "Ügyes voltál! Gyakorolj még egy kicsit, hogy kevesebb menjen mellé.";
+
+    if (szamlalo >= 15 && szamlalo <= 22) {
+        document.body.style.backgroundColor = "rgb(219, 178, 11)";
+        vegjatekSmall.innerHTML = "Haladó! Alakul ez.";
     }
-    if (szamlalo == 30) {
+    if (szamlalo >= 23 && szamlalo <= 29) {
+        document.body.style.backgroundColor = "rgb(134, 109, 7)";
+        vegjatekSmall.innerHTML = "Közepes! Gyakorolj még egy kicsit, hogy kevesebb menjen mellé.";
+    }
+    if (szamlalo >= 30) {
         document.body.style.backgroundColor = "rgb(78, 63, 4)";
         vegjatekSmall.innerHTML = "Nem volt rossz! Gyakorlás teszi a mestert.";
     }
 }
 
+let probSzamModal = document.querySelector("#probSzamModal");
+
 function vegJatek() {
     if (tombId.length == 0) {
         $("#exampleModalCenter").modal();
+        probSzamModal.innerHTML = szamlalo;
     }
 }
 
