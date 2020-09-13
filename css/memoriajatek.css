@@ -48,6 +48,10 @@ h1 {
     margin: 10px 0;
 }
 
+.probD {
+    box-shadow: 3px 3px 5px grey;
+}
+
 #modalSmall {
     font-size: 30px;
 }
