@@ -25,6 +25,18 @@ let bricks = [];
 let c;
 let r;
 
+if (window.innerWidth < 400) {
+    kep.width = "240";
+    kep.height = "160";
+    canvas.width = "240";
+    canvas.height = "160";
+    ballRadius = 5;
+    paddleHeight = 10;
+    paddleWidth = 50;
+    brickWidth = 10;
+    brickHeight = 10;
+}
+
 
 for (c = 0; c < brickColumnCount; c++) {
     bricks[c] = [];
