@@ -27,7 +27,7 @@
           <h4 class="modal-title">Add meg a keresztneved!</h4>
         </div>
         <div class="modal-body">
-          <input id="felhasznaloNev" type="text" value="Vendég">
+          <input id="felhasznaloNev" type="text" value="" placeholder="Vendég">
           <button id="okeGomb" onclick="okeUdvozlet()" type="button" class="btn btn-primary" data-dismiss="modal">Oké</button>
         </div>
       </div>
@@ -98,7 +98,7 @@
   </nav>
 
   <!-- html tartalom -->
-  <h1 id="udvozlet">Üdvözöllek <small id="neve">Vendég</small>! Jó böngészést az oldalon!</h1>
+  <h1 id="udvozlet">Üdvözöllek <small onclick="nevTorol()" id="neve"></small>! Jó böngészést az oldalon!</h1>
 <div class="szoveg">
   <p>Ez az oldal azért jött létre, hogy egy helyen meglegyenek az általam készített weboldalak.
     Jelenleg még tanulom a webfejlesztést, bővebben a <a target="_blank" href="bemutatkozás.html">bemutatkozás</a> aloldalon olvashatsz rólam.
