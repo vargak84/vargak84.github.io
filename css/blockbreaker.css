@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+#foDiv {
+    text-align: center;
+}
+
+#startButtonDiv {
+    text-align: center;
+}
+
+canvas { background: #eee; }
