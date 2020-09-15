@@ -22,7 +22,7 @@ function okeUdvozlet() {
     neveMezo.innerHTML = localStorage.keresztNev;
   } else if(felhasznaloNev.value.indexOf(" ") == 0) {
     keresztNev == undefined;
-    alert("Szóköz karakter nem lehet az első helyen!")
+    alert("Szóköz nem lehet az első karakter!")
     location.reload();
   } else {
     neveMezo.innerHTML = felhasznaloNev.value;
