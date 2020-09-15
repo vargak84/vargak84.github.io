@@ -92,6 +92,16 @@ localStorage.clear();
 pedig elvesztette azt.</p>
 <input type="button" value="Törlés" onclick="slclear();" />
 
+<script>
+    function RestrictSpace() {
+    if (event.keyCode == 32) {
+        return false;
+    }
+}
+</script>
+
+<textarea onkeypress="return RestrictSpace()"></textarea>
+
 </body>
 
 </html>
