@@ -1,6 +1,19 @@
+if (window.innerWidth < 400) {
+    kep1.style.height = "32%"
+    kep1.style.width = "32%"
+    kep1.style.borderRadius = "20px"
+    kep2.style.height = "32%"
+    kep2.style.width = "32%"
+    kep2.style.borderRadius = "20px"
+    kep3.style.height = "32%"
+    kep3.style.width = "32%"
+    kep3.style.borderRadius = "20px"
+    penzKeretDiv.style.width = "90%"
+}
+
 let widthModosit = document.querySelector("#penzKeretDiv");
 let nyeremenyUzenet = document.querySelector("#nyeremenyUzenet");
-if(window.innerWidth < 400) {
+if (window.innerWidth < 400) {
     widthModosit.style.width = "85%";
     nyeremenyUzenet.style.width = "85%";
 }
@@ -255,7 +268,7 @@ function szorzoVizsgalat() {
 }
 
 function jatekKeretNull() {
-    if(parseInt(jatekKeretMezo.innerHTML) == 0) {
+    if (parseInt(jatekKeretMezo.innerHTML) == 0) {
         $("#exampleModalCenter2").modal()
     }
 }
