@@ -30,9 +30,9 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Az ismert logikai játék webes változata. A Színözön lényege, hogy az elrejtett golyók színét,
+                        Az ismert logikai játék webes változata. A Színözön lényege, hogy az elrejtett golyók színét, 
                         illetve ezek sorrendjét kitaláljuk. Ellenőrzésnél a golyó cellájának háttere 3 színt vehet fel.
-                        Piros esetén a golyó színét, míg zöldnél a színét és helyét is eltaláltuk. Ha nem változik a
+                        Piros esetén a golyó színét, míg zöldnél a színét és helyét is eltaláltuk. Ha nem változik a 
                         háttérszín, akkor a választott színű golyó nincs bent a megfejtésben. Akkor hajrá!
                     </div>
                     <div class="modal-footer">
@@ -46,13 +46,16 @@
     </div>
     <div class="table1">
         <h3>A megoldás:</h3>
-
-        <div>
-            <input id="megoldasElsoGolyoMezo" class="nav-link disabled form-control" type="image" src="" alt="">
-            <input id="megoldasMasodikGolyoMezo" class="nav-link disabled form-control" type="image" src="" alt="">
-            <input id="megoldasHarmadikGolyoMezo" class="nav-link disabled form-control" type="image" src="" alt="">
-            <input id="megoldasNegyedikGolyoMezo" class="nav-link disabled form-control" type="image" src="" alt="">
-        </div>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <td id="megoldasElsoGolyoMezo"></td>
+                    <td id="megoldasMasodikGolyoMezo"></td>
+                    <td id="megoldasHarmadikGolyoMezo"></td>
+                    <td id="megoldasNegyedikGolyoMezo"></td>
+                </tr>
+            </tbody>
+        </table>
 
         <!-- Button trigger modal -->
         <button id="mutatGomb" type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
@@ -83,45 +86,18 @@
         </div>
 
     </div>
-    <div id="hozzaad" class="table1">
-        <div id="tableTbody">
-
-        </div>
-        <!-- <table id="rejt2" class="table table-bordered">
+    <div id="hozzaad" class="table12">
+        <table id="rejt2" class="table table-bordered">
             <tbody id="tableTbody">
 
             </tbody>
-        </table> -->
+        </table>
         <button onclick="egyezesVizsgalat()" id="ellenorzesGomb" class="btn btn-success" hidden>Ellenőrzés</button>
     </div>
 
     <div class="table2">
         <h3 class="szoveg">Válassz egy színt!</h3>
-
-
-        <div>
-            <input id="pirosGolyo" onclick="pirosGolyoValaszt()" class="nav-link form-control" type="image"
-                src="/img/szinozon/piros.png" alt="piros">
-            <input id="feherGolyo" onclick="feherGolyoValaszt()" class="nav-link form-control" type="image"
-                src="/img/szinozon/feher.png" alt="feher">
-            <input id="kekGolyo" onclick="kekGolyoValaszt()" class="nav-link form-control" type="image"
-                src="/img/szinozon/kek.png" alt="kek">
-            <input id="rozsaGolyo" onclick="rozsaGolyoValaszt()" class="nav-link form-control" type="image"
-                src="/img/szinozon/rozsaszin.png" alt="rozsaszin">
-        </div>
-        <div>
-            <input id="narancsGolyo" onclick="narancsGolyoValaszt()" class="nav-link form-control" type="image"
-                src="/img/szinozon/narancs.png" alt="narancs">
-            <input id="lilaGolyo" onclick="lilaGolyoValaszt()" class="nav-link form-control" type="image"
-                src="/img/szinozon/lila.png" alt="lila">
-            <input id="sargaGolyo" onclick="sargaGolyoValaszt()" class="nav-link form-control" type="image"
-                src="/img/szinozon/sarga.png" alt="sarga">
-            <input id="zoldGolyo" onclick="zoldGolyoValaszt()" class="nav-link form-control" type="image"
-                src="/img/szinozon/zold.png" alt="zold">
-        </div>
-
-
-        <!-- <table class="table table-bordered">
+        <table class="table table-bordered">
             <tbody>
                 <tr>
                     <td id="pirosGolyo"><img onclick="pirosGolyoValaszt()" src="/img/szinozon/piros.png" alt="piros">
@@ -131,15 +107,18 @@
                     <td id="kekGolyo"><img onclick="kekGolyoValaszt()" src="/img/szinozon/kek.png" alt="kek"></td>
                     <td id="rozsaGolyo"><img onclick="rozsaGolyoValaszt()" src="/img/szinozon/rozsaszin.png"
                             alt="rozsaszin"></td>
+                    
+                </tr>
+                <tr>
                     <td id="narancsGolyo"><img onclick="narancsGolyoValaszt()" src="/img/szinozon/narancs.png"
-                            alt="narancs"></td>
-                    <td id="lilaGolyo"><img onclick="lilaGolyoValaszt()" src="/img/szinozon/lila.png" alt="lila"></td>
-                    <td id="sargaGolyo"><img onclick="sargaGolyoValaszt()" src="/img/szinozon/sarga.png" alt="sarga">
-                    </td>
-                    <td id="zoldGolyo"><img onclick="zoldGolyoValaszt()" src="/img/szinozon/zold.png" alt="zold"></td>
+                        alt="narancs"></td>
+                <td id="lilaGolyo"><img onclick="lilaGolyoValaszt()" src="/img/szinozon/lila.png" alt="lila"></td>
+                <td id="sargaGolyo"><img onclick="sargaGolyoValaszt()" src="/img/szinozon/sarga.png" alt="sarga">
+                </td>
+                <td id="zoldGolyo"><img onclick="zoldGolyoValaszt()" src="/img/szinozon/zold.png" alt="zold"></td>
                 </tr>
             </tbody>
-        </table> -->
+        </table>
     </div>
 
     <script src="/js/szinozon.js"></script>
