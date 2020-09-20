@@ -20,15 +20,19 @@ function veletlenKep() {
 
 veletlenKep();
 let megoldasElsoGolyo = document.createElement("img");
+megoldasElsoGolyo.style.width = "100%";
 megoldasElsoGolyo.src = kep[ry];
 veletlenKep();
 let megoldasMasodikGolyo = document.createElement("img");
+megoldasMasodikGolyo.style.width = "100%";
 megoldasMasodikGolyo.src = kep[ry];
 veletlenKep();
 let megoldasHarmadikGolyo = document.createElement("img");
+megoldasHarmadikGolyo.style.width = "100%";
 megoldasHarmadikGolyo.src = kep[ry];
 veletlenKep();
 let megoldasNegyedikGolyo = document.createElement("img");
+megoldasNegyedikGolyo.style.width = "100%";
 megoldasNegyedikGolyo.src = kep[ry];
 
 let megoldasTomb = [
@@ -43,16 +47,15 @@ let megoldasMasodikGolyoMezo = document.querySelector("#megoldasMasodikGolyoMezo
 let megoldasHarmadikGolyoMezo = document.querySelector("#megoldasHarmadikGolyoMezo")
 let megoldasNegyedikGolyoMezo = document.querySelector("#megoldasNegyedikGolyoMezo")
 
-for (let i = 0; i < megoldasTomb.length; i++) {
-    megoldasElsoGolyoMezo.appendChild(megoldasTomb[0]);
-    megoldasElsoGolyo.hidden = true;
-    megoldasMasodikGolyoMezo.appendChild(megoldasTomb[1]);
-    megoldasMasodikGolyo.hidden = true;
-    megoldasHarmadikGolyoMezo.appendChild(megoldasTomb[2]);
-    megoldasHarmadikGolyo.hidden = true;
-    megoldasNegyedikGolyoMezo.appendChild(megoldasTomb[3]);
-    megoldasNegyedikGolyo.hidden = true;
-}
+
+megoldasElsoGolyoMezo.appendChild(megoldasTomb[0]);
+megoldasElsoGolyo.hidden = true;
+megoldasMasodikGolyoMezo.appendChild(megoldasTomb[1]);
+megoldasMasodikGolyo.hidden = true;
+megoldasHarmadikGolyoMezo.appendChild(megoldasTomb[2]);
+megoldasHarmadikGolyo.hidden = true;
+megoldasNegyedikGolyoMezo.appendChild(megoldasTomb[3]);
+megoldasNegyedikGolyo.hidden = true;
 
 let tableTbody = document.querySelector("#tableTbody");
 let cellaId = 0;
@@ -154,15 +157,19 @@ let egeszszamVizsgalo = 0;
 
 
 function ujTablaSor() {
-    let rows = 1;
-    var cols = 4;
-    for (let r = 0; r < rows; r++) {
-        let row = tableTbody.insertRow(-1);
-        for (let c = 0; c < cols; c++) {
-            let cell = row.insertCell(-1);
-            cellaId += 1;
-            cell.setAttribute('id', cellaId);
-        }
+    let div = document.createElement("div");
+    for (let i = 0; i < 4; i++) {
+        let input = document.createElement("input");
+        input.className = "nav-link form-control"
+        input.type = "image";
+        input.src = "";
+        input.alt = ""
+        input.style.margin = "2px";
+        input.style.display = "inline-block";
+        cellaId += 1;
+        input.id = cellaId;
+        tableTbody.appendChild(div);
+        div.appendChild(input);
     }
 }
 
@@ -176,7 +183,10 @@ function jatekosTombHosszEllenorzes() {
 
 function golyoCellabaTesz() {
     for (let i = 0; i < valasztottSzinTomb.length; i++) {
+        valasztottSzinTomb[0].style.height = "100%";
         aktivCella.appendChild(valasztottSzinTomb[0]);
+        //aktivCella.style.textAlign = "center";
+        //aktivCella.style.margin = "10px auto";
         valasztottSzinTomb[0].setAttribute("onclick", "golyoTorol()");
         /* aktivCellaValtoztat(); */
         /* valasztottSzinTomb = []; */
@@ -252,7 +262,7 @@ function egyezesVizsgalat() {
 
             // szin egyezés
             let mgoAzonosSzinulElemekSzama = megoldasTomb.filter(elem => elem.src == megoldasTomb[j].src).length;
-            let jtkAzonosSzinulElemekSzama = jatekosTomb.filter((elem, index) => elem.src == jatekosTomb[i].src && index <= i ).length
+            let jtkAzonosSzinulElemekSzama = jatekosTomb.filter((elem, index) => elem.src == jatekosTomb[i].src && index <= i).length
             if (megoldasTomb[j].src == jatekosTomb[i].src
                 && jtkAzonosSzinulElemekSzama <= mgoAzonosSzinulElemekSzama) {
                 szinEgyezes = true;
@@ -273,7 +283,7 @@ function egyezesVizsgalat() {
         console.log(megoldasTomb);
         console.log(jatekosTomb); */
 
-    } 
+    }
 
     let cellaMinNegy = document.getElementById(aktivCella.id - 3);
     cellaMinNegy.style.backgroundColor = eredmeny[0];
@@ -305,7 +315,7 @@ function mindZold(eredmeny) {
 
 
 let rejt1 = document.querySelector(".table2");
-let rejt2 = document.querySelector("#rejt2");
+let rejt2 = document.querySelector("#tableTbody");
 let rejt3 = document.querySelector("#ellenorzesGomb");
 let hozzaad = document.querySelector("#hozzaad");
 let mutatGomb = document.querySelector("#mutatGomb");

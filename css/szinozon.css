@@ -10,7 +10,7 @@ body {
 
 .table1 {
     text-align: center;
-    width: 25%;
+    width: 40%;
     margin: auto;
     border: solid 2px black;
     margin-bottom: 20px;
@@ -23,7 +23,7 @@ body {
 
 .table2 {
     text-align: center;
-    width: 50%;
+    width: 40%;
     margin: auto;
     border: solid 2px black;
     margin-bottom: 20px;
@@ -32,4 +32,11 @@ body {
 
 #felad {
     font-size: 200%;
+}
+
+.nav-link {
+    width: 70px;
+    height: 55px;
+    display: inline-block;
+    margin: 10px auto;
 }
