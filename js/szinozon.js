@@ -259,7 +259,7 @@ function egyezesVizsgalat() {
 
             // szin egyezés
             let mgoAzonosSzinulElemekSzama = megoldasTomb.filter(elem => elem.src == megoldasTomb[j].src).length;
-            let jtkAzonosSzinulElemekSzama = jatekosTomb.filter((elem, index) => elem.src == jatekosTomb[i].src && index <= i ).length
+            let jtkAzonosSzinulElemekSzama = jatekosTomb.filter((elem, index) => elem.src == jatekosTomb[i].src && index <= i).length
             if (megoldasTomb[j].src == jatekosTomb[i].src
                 && jtkAzonosSzinulElemekSzama <= mgoAzonosSzinulElemekSzama) {
                 szinEgyezes = true;
@@ -280,7 +280,7 @@ function egyezesVizsgalat() {
         console.log(megoldasTomb);
         console.log(jatekosTomb); */
 
-    } 
+    }
 
     let cellaMinNegy = document.getElementById(aktivCella.id - 3);
     cellaMinNegy.style.backgroundColor = eredmeny[0];
@@ -371,36 +371,37 @@ let table12 = document.querySelector(".table12");
 let table2 = document.querySelector(".table2");
 
 
-    if (window.innerWidth < 750) {
-        table1.style.width = "80%"
-        table12.style.width = "80%"
-        table2.style.width = "80%"
-        pirosGolyo.firstChild.style.width = "30px"
-        feherGolyo.firstChild.style.width = "30px"
-        kekGolyo.firstChild.style.width = "30px"
-        rozsaGolyo.firstChild.style.width = "30px"
-        narancsGolyo.firstChild.style.width = "30px"
-        lilaGolyo.firstChild.style.width = "30px"
-        sargaGolyo.firstChild.style.width = "30px"
-        zoldGolyo.firstChild.style.width = "30px"
-        megoldasElsoGolyoMezo.firstChild.width = 30;
-        megoldasMasodikGolyoMezo.firstChild.width = 30;
-        megoldasHarmadikGolyoMezo.firstChild.width = 30;
-        megoldasNegyedikGolyoMezo.firstChild.width = 30;
-    } else {
-        pirosGolyo.firstChild.style.width = "50px"
-        feherGolyo.firstChild.style.width = "50px"
-        kekGolyo.firstChild.style.width = "50px"
-        rozsaGolyo.firstChild.style.width = "50px"
-        narancsGolyo.firstChild.style.width = "50px"
-        lilaGolyo.firstChild.style.width = "50px"
-        sargaGolyo.firstChild.style.width = "50px"
-        zoldGolyo.firstChild.style.width = "50px"
-        megoldasElsoGolyoMezo.firstChild.width = 50;
-        megoldasMasodikGolyoMezo.firstChild.width = 50;
-        megoldasHarmadikGolyoMezo.firstChild.width = 50;
-        megoldasNegyedikGolyoMezo.firstChild.width = 50;
-    }
+if (window.innerWidth < 750) {
+    table1.style.width = "80%"
+    table12.style.width = "80%"
+    table2.style.width = "80%"
+    pirosGolyo.firstChild.style.width = "30px"
+    feherGolyo.firstChild.style.width = "30px"
+    kekGolyo.firstChild.style.width = "30px"
+    rozsaGolyo.firstChild.style.width = "30px"
+    narancsGolyo.firstChild.style.width = "30px"
+    lilaGolyo.firstChild.style.width = "30px"
+    sargaGolyo.firstChild.style.width = "30px"
+    zoldGolyo.firstChild.style.width = "30px"
+    megoldasElsoGolyoMezo.firstChild.width = 30;
+    megoldasMasodikGolyoMezo.firstChild.width = 30;
+    megoldasHarmadikGolyoMezo.firstChild.width = 30;
+    megoldasNegyedikGolyoMezo.firstChild.width = 30;
+} else {
+    pirosGolyo.firstChild.style.width = "50px"
+    feherGolyo.firstChild.style.width = "50px"
+    kekGolyo.firstChild.style.width = "50px"
+    rozsaGolyo.firstChild.style.width = "50px"
+    narancsGolyo.firstChild.style.width = "50px"
+    lilaGolyo.firstChild.style.width = "50px"
+    sargaGolyo.firstChild.style.width = "50px"
+    zoldGolyo.firstChild.style.width = "50px"
+    megoldasElsoGolyoMezo.firstChild.width = 50;
+    megoldasMasodikGolyoMezo.firstChild.width = 50;
+    megoldasHarmadikGolyoMezo.firstChild.width = 50;
+    megoldasNegyedikGolyoMezo.firstChild.width = 50;
+}
+alert(window.innerWidth);
 
 
 /* function egyezesVizsgalat() {
