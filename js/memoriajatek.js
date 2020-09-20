@@ -53,7 +53,7 @@ let kep18 = document.querySelector("#kep18")
 let kep19 = document.querySelector("#kep19")
 let kep20 = document.querySelector("#kep20")
 
-if (window.innerWidth < 500) {
+if (window.innerWidth < 750) {
     kep1.style.height = "70px";
     kep1.style.width = "70px";
     kep2.style.height = "70px";

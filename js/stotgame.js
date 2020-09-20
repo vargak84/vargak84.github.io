@@ -1,4 +1,4 @@
-if (window.innerWidth < 500) {
+if (window.innerWidth < 750) {
     kep1.style.height = "32%"
     kep1.style.width = "32%"
     kep1.style.borderRadius = "20px"
@@ -13,7 +13,7 @@ if (window.innerWidth < 500) {
 
 let widthModosit = document.querySelector("#penzKeretDiv");
 let nyeremenyUzenet = document.querySelector("#nyeremenyUzenet");
-if (window.innerWidth < 500) {
+if (window.innerWidth < 750) {
     widthModosit.style.width = "85%";
     nyeremenyUzenet.style.width = "85%";
 }

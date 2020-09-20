@@ -54,6 +54,6 @@ function generate() {
 
 let bodyTorzs = document.querySelector(".bodyTorzs");
 
-if (window.innerWidth < 500) {
+if (window.innerWidth < 750) {
     bodyTorzs.style.width = "70%"
 }

@@ -176,7 +176,7 @@ function jatekosTombHosszEllenorzes() {
 
 function golyoCellabaTesz() {
     for (let i = 0; i < valasztottSzinTomb.length; i++) {
-        if (window.innerWidth < 500) {
+        if (window.innerWidth < 750) {
             valasztottSzinTomb[0].style.width = "30px"
             valasztottSzinTomb[0].style.height = "30px"
         } else {
@@ -371,7 +371,7 @@ let table12 = document.querySelector(".table12");
 let table2 = document.querySelector(".table2");
 
 
-    if (window.innerWidth < 500) {
+    if (window.innerWidth < 750) {
         table1.style.width = "80%"
         table12.style.width = "80%"
         table2.style.width = "80%"
