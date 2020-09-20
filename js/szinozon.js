@@ -402,9 +402,6 @@ if (window.innerWidth < 750) {
     megoldasNegyedikGolyoMezo.firstChild.width = 50;
 }
 
-let aaa = document.querySelector("#aaa");
-aaa.value = window.innerWidth;
-
 /* function egyezesVizsgalat() {
     for (let i = 0; i < megoldasTomb.length; i++) {
         let szinEgyezes = false;
