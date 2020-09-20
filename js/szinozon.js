@@ -401,8 +401,9 @@ if (window.innerWidth < 750) {
     megoldasHarmadikGolyoMezo.firstChild.width = 50;
     megoldasNegyedikGolyoMezo.firstChild.width = 50;
 }
-alert(window.innerWidth);
 
+let aaa = document.querySelector("#aaa");
+aaa.value = window.innerWidth;
 
 /* function egyezesVizsgalat() {
     for (let i = 0; i < megoldasTomb.length; i++) {
