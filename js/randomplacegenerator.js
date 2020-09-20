@@ -51,3 +51,9 @@ function generate() {
                                             digitTen.value = 1;
                                         }
 };
+
+let bodyTorzs = document.querySelector(".bodyTorzs");
+
+if (window.innerWidth < 500) {
+    bodyTorzs.style.width = "70%"
+}
