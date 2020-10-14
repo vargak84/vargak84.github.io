@@ -10,100 +10,18 @@
 <body>
 
     <script>
-        function adatbe() {
-            let nev = document.egyszeruform.Name.value;
-            localStorage.firstname = nev;
-        }
-
-        function adatki() {
-            alert(localStorage.firstname);
-
-        }
-    </script>
-
-
-
-    <div align="center">
-        <p> Mi a neved? Emlékezni fogok rá!</p>
-        <form name="egyszeruform">
-            <input type="text" name="Name" />
-            <input type="submit" onclick="adatbe()" />
-            <input type="button" id="" value="Lekérdez" onclick="adatki()" />
-        </form>
-    </div>
-
-    <script>
-
-
-
-        function adatbe2() {
-            var nev2 = document.egyszeruform2.Name.value;
-            sessionStorage.firstname = nev2;
-        }
-
-
-
-        function adatki2() {
-            alert(sessionStorage.firstname);
-        }
-
-        function torolSession() {
-            sessionStorage.clear();
-        }
-
-        function torolLocal() {
-            localStorage.clear();
-        }
-
-    </script>
-    <div align="center">
-        <p> Mi a neved? Emlékezni fogok rá, de csak amíg be nem zársz!</p>
-        <form name="egyszeruform2">
-            <input type="text" name="Name" />
-            <input type="submit" onclick="adatbe2()" />
-            <input type="button" id="" value="Lekérdez" onclick="adatki2()" />
-            <input type="button" id="" value="Töröl session" onclick="torolSession()" />
-            <input type="button" id="" value="Töröl local" onclick="torolLocal()" />
-        </form>
-    </div>
-
-    <h1>Láttam már? Node hányszor?</h1>
-    <p>localStorage - Oldalbetöltések száma: <span id="localdarab">0</span> db</p>
-    <p>sessionStorage - Oldalbetöltések száma: <span id="sessiondarab">0</span> db</p>
-
-    <script type="text/javascript">
-        if (!localStorage.oldalbetoltes) //localStorage létrehozása, nullázása és oltalbetöltésenként +1 hozzáadása
-            localStorage.oldalbetoltes = 0;
-        localStorage.oldalbetoltes = 1 + parseInt(localStorage.oldalbetoltes);
-        document.getElementById('localdarab').innerHTML = localStorage.oldalbetoltes; //localdarab-ba eltesszük
-
-        if (!sessionStorage.oldalbetoltes) //sessionStorage létrehozása, nullázása és oltalbetöltésenként +1 hozzáadása
-            sessionStorage.oldalbetoltes = 0;
-        sessionStorage.oldalbetoltes = 1 + parseInt(sessionStorage.oldalbetoltes);
-        document.getElementById('sessiondarab').innerHTML = sessionStorage.oldalbetoltes; //sessiondarab-ba eltesszük
-
-        function slclear() { //Local- és SessionStorage törlése egy gomb segítségével
-            sessionStorage.clear();
-            localStorage.clear();
-        }
-    </script>
-
-    <p>Párszor frissíts rá az oldalra majd zárd be és nyisd meg újra a post-ból. Láthatod, hogy a localstorage megőrizte
-        a tartalmát, a sessionstorage
-        pedig elvesztette azt.</p>
-    <input type="button" value="Törlés" onclick="slclear();" />
-
-    <script>
-        function RestrictSpace() {
-            if (event.keyCode == 32) {
-                return false;
+        function makeid(length) {
+            var result = '';
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var charactersLength = characters.length;
+            for (var i = 0; i < length; i++) {
+                result += characters.charAt(Math.floor(Math.random() * charactersLength));
             }
+            return result;
         }
+
+        console.log(makeid(15));
     </script>
-
-    <textarea onkeypress="return RestrictSpace()"></textarea>
-
-    
 
 </body>
 
